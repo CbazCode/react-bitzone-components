@@ -1,5 +1,12 @@
+import { Button } from "./components/Button/Button";
+
+
 function App() {
-	return <div>Challenge 1</div>;
+	return (
+		<>
+			<Button>Prueba</Button>
+		</>
+	);
 }
 
 export default App;
