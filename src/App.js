@@ -1,5 +1,6 @@
 import './app.css';
-import { Button, Skeleton } from './components';
+import { Button, Skeleton, Switch } from './components';
+
 
 function App() {
 	return (
@@ -85,6 +86,7 @@ function App() {
 				>
 					Button
 				</Button>
+				<Switch id="koshi"  name="test" bgColor="green"/>
 			</div>
 			
 		</>
