@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './app.css';
-import { Button, Skeleton, Slider } from './components';
+import { Button, Skeleton, Slider, Switch } from './components';
+
 
 function App() {
 	const [value, setValue] = useState(5)
@@ -87,6 +88,7 @@ function App() {
 				>
 					Button
 				</Button>
+				<Switch id="koshi"  name="test" bgColor="green"/>
 			</div>
 
 			
