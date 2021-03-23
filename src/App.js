@@ -1,5 +1,5 @@
 import './app.css';
-import { Skeleton } from './components';
+import { Button, Skeleton } from './components';
 
 function App() {
 	return (
@@ -33,6 +33,7 @@ function App() {
 			</div>
 			</div>
 			
+			<Button>Prueba</Button>
 		</>
 	);
 }
