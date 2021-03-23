@@ -43,6 +43,7 @@ function App() {
 					isDisabled
 					full
 					outliner={true}
+					outlinerColor="purple"
 					>
 					Button
 				</Button>
@@ -96,17 +97,17 @@ function App() {
 			<div style={{ display: 'flex', width:'100%', padding: '1rem 2rem' }}>
 			<Slider 
 				min={0} 
-				max={50} 
+				max={500} 
 				step={1} 
 				orientation='horizontal' 
 				bgThumb='indigo'
 				value={value} 
 				onChange={(e)=>setValue(e.target.value)} 
-				
+				full
 			/>
 			<Slider 
 				min={0} 
-				max={50} 
+				max={500} 
 				step={1} 
 				orientation='vertical' 
 				bgThumb='blue'

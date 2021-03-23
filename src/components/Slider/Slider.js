@@ -21,6 +21,13 @@ const setBgColor = (bgColor = 'default') => {
 	}
 };
 
+//Tamaño de acuerdo al contenedor
+const setFullWidth = (full)=>(
+	full ?
+	`100%`
+	 :
+	`auto`
+  )
 
 const setOrientation = (orient = 'horizontal') =>
 	orient === 'horizontal'
@@ -41,7 +48,7 @@ const Slider = styled.input.attrs((props) => ({
 	-webkit-appearance: none;
 	${({ orientation }) => setOrientation(orientation)}
 
-	width: ${(props) => (props.orientation === 'vertical' ? 'auto' : '100%')};
+	width: ${(props) => (props.orientation === 'vertical' ? 'auto' : `${setFullWidth(props.full)}`)};
 	height: 25px;
 	outline: none;
 	opacity: 0.7;
