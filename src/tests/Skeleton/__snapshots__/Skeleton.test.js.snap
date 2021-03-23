@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test en <Skeleton /> componente <Skeleton /> debe renderizarse correctamente 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  background-color: #cacaca;
+  border-radius: 4px;
+  -webkit-animation: dKHzAH 3s linear infinite;
+  animation: dKHzAH 3s linear infinite;
+  color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<div
+  class="c0"
+/>
+`;
