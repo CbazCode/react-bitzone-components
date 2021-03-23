@@ -36,27 +36,36 @@ function App() {
 					color="white" 
 					isShadow ={true} 
 					size="sm" 
-					rounded="full">
+					rounded="full"
+					isDisabled
+					full
+					>
 					Button
 				</Button>
 				<Button 
 					bgColor="yellow" 
 					size="md" 
-					rounded="soft">
+					rounded="soft"
+					full
+					isDisabled
+					>
 					Button
 				</Button>
 				<Button 
 					bgColor="green" 
 					color="white" 
 					isShadow ={true} 
-					size="lg">
+					size="lg"
+					isDisabled
+					>
 					Button
 				</Button>
 				<Button 
 					bgColor="blue" 
 					color="white"  
 					size="xl" 
-					rounded="full">
+					rounded="full"
+				>
 					Button
 				</Button>
 				<Button 
@@ -64,13 +73,15 @@ function App() {
 					color="white" 
 					isShadow ={true} 
 					size="sm" 
-					rounded="soft">
+					rounded="soft"
+				>
 					Button
 				</Button>
 				<Button 
 					bgColor="indigo"  
 					isShadow ={true} 
-					size="md">
+					size="md"
+				>
 					Button
 				</Button>
 			</div>

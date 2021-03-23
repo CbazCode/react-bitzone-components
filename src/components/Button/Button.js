@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 
 
@@ -87,25 +87,53 @@ const setHover = (bgColor = "default", color = "default") =>{
 }
 
 
-const Button = styled.button`
+//Tamaño de acuerdo al contenedor
+const setFullWidth = (full)=>(
+  full && 
+  css`
+    width: 100%;
+  `
+)
+
+//Tema en disabled
+const themeButton = (isDisabled) =>(
+  isDisabled &&
+  css`
+  opacity: 0.5;
+  &:hover {
+    opacity: 0.5;
+  }
+  `  
+) 
+
+
+
+const Button = styled.button.attrs(props => (
+  {
+    disabled: props.isDisabled
+  }
+))
+`
   box-sizing:'border-box';
   background-color: ${({bgColor}) => setBgColor(bgColor)};
+  border: none;
+  box-shadow: ${({isShadow}) => setShadow(isShadow)};
   color: ${({color}) => setColorText(color)};
-  font-size: 1em;
+  cursor:pointer;
+  font-family: 'Sora', sans-serif;
+  font-size:  ${({size}) => setFontSize(size)};
   margin: 0.5em;
   padding: 0.5em 1em;
   border-radius: ${({rounded}) => roundedBtn(rounded)};
   outline: none;
-  border: none;
-  cursor:pointer;
-  font-family: 'Sora', sans-serif;
-  box-shadow: ${({isShadow}) => setShadow(isShadow)};
-  font-size:  ${({size}) => setFontSize(size)};
   transition: all 0.2s ease-in-out;
-
+  ${({full})=> setFullWidth(full)};
+  
   &:hover{
     background-color: ${ ( { bgColor, color } ) => setHover(bgColor, color)};
   }
+
+  ${({isDisabled})=> themeButton(isDisabled)}
  
 `;
 
