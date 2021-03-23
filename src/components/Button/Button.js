@@ -108,7 +108,7 @@ const themeDisabledBtn = (isDisabled) =>(
 
 //Button con solo border sin bgColor
 const setOutline = (outliner, outlinerColor) =>{
-  console.log(outliner,outlinerColor);
+
   if(outliner){
     switch (outlinerColor) {
       case "red":
@@ -224,7 +224,6 @@ const Button = styled.button.attrs(props => (
   }
 ))
 `
-  box-sizing:'border-box';
   background-color: ${({bgColor}) => setBgColor(bgColor)};
   border: none;
   box-shadow: ${({isShadow}) => setShadow(isShadow)};
@@ -246,8 +245,6 @@ const Button = styled.button.attrs(props => (
   ${({isDisabled})=> themeDisabledBtn(isDisabled)}
 
   ${({outliner, outlinerColor })=> setOutline(outliner, outlinerColor)}
-  /* color: #DC2626;
-  border: 1px solid #DC2626; */
  
 `;
 
