@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+const Button = styled.button`
   color: blue;
   font-size: 1em;
   margin: 1em;
@@ -12,3 +12,4 @@ export const Button = styled.button`
       color:red;
   }
 `;
+export default Button;
