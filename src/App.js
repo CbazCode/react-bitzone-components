@@ -31,12 +31,48 @@ function App() {
 					</div>
 				
 				</div>
-				<Button bgColor="red" color="white" isShadow ={true} size="xl" rounded="soft">Login</Button>
-				<Button bgColor="yellow" color="white" isShadow ={true} size="xl" rounded="soft">Login</Button>
-				<Button bgColor="green" color="white" isShadow ={true} size="xl" rounded="soft">Login</Button>
-				<Button bgColor="blue" color="white" isShadow ={true} size="xl" rounded="soft">Login</Button>
-				<Button bgColor="purple" color="white" isShadow ={true} size="xl" rounded="soft">Login</Button>
-				<Button bgColor="indigo"  isShadow ={true} size="xl" rounded="soft">Login</Button>
+				<Button 
+					bgColor="red" 
+					color="white" 
+					isShadow ={true} 
+					size="sm" 
+					rounded="full">
+					Button
+				</Button>
+				<Button 
+					bgColor="yellow" 
+					size="md" 
+					rounded="soft">
+					Button
+				</Button>
+				<Button 
+					bgColor="green" 
+					color="white" 
+					isShadow ={true} 
+					size="lg">
+					Button
+				</Button>
+				<Button 
+					bgColor="blue" 
+					color="white"  
+					size="xl" 
+					rounded="full">
+					Button
+				</Button>
+				<Button 
+					bgColor="purple" 
+					color="white" 
+					isShadow ={true} 
+					size="sm" 
+					rounded="soft">
+					Button
+				</Button>
+				<Button 
+					bgColor="indigo"  
+					isShadow ={true} 
+					size="md">
+					Button
+				</Button>
 			</div>
 			
 		</>
