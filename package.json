@@ -38,6 +38,9 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.9"
+    "@testing-library/jest-dom": "^5.11.9",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.1"
   }
 }
