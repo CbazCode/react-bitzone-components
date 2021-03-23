@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import './app.css';
-import { Button, Skeleton } from './components';
+import { Button, Skeleton, Slider } from './components';
 
 function App() {
+	const [value, setValue] = useState(5)
 	return (
 		<>
 			{/* EJEMPLO SKELETON */}
@@ -84,6 +86,33 @@ function App() {
 				>
 					Button
 				</Button>
+			</div>
+
+			
+			
+			<div style={{ display: 'flex', width:'100%', padding: '1rem 2rem' }}>
+			<Slider 
+				min={0} 
+				max={50} 
+				step={1} 
+				orientation='horizontal' 
+				bgThumb='indigo'
+				value={value} 
+				onChange={(e)=>setValue(e.target.value)} 
+				
+			/>
+			<Slider 
+				min={0} 
+				max={50} 
+				step={1} 
+				orientation='vertical' 
+				bgThumb='blue'
+				value={value} 
+				onChange={(e)=>setValue(e.target.value)} 
+				
+			/>
+			
+			<h1>{value}</h1>
 			</div>
 			
 		</>
