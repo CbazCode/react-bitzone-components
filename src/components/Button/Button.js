@@ -96,7 +96,7 @@ const setFullWidth = (full)=>(
 )
 
 //Tema en disabled
-const themeButton = (isDisabled) =>(
+const themeDisabledBtn = (isDisabled) =>(
   isDisabled &&
   css`
   opacity: 0.5;
@@ -105,6 +105,116 @@ const themeButton = (isDisabled) =>(
   }
   `  
 ) 
+
+//Button con solo border sin bgColor
+const setOutline = (outliner, outlinerColor) =>{
+  console.log(outliner,outlinerColor);
+  if(outliner){
+    switch (outlinerColor) {
+      case "red":
+          return (
+            css`
+              color: #DC2626;
+              border: 1.5px solid #DC2626;
+              background-color:unset;
+
+              &:hover {
+                color:#F9FAFB;
+                background-color:#DC2626;
+              }
+            `)
+      case "yellow":
+        return (
+          css`
+            color: #FBBF24;
+            border: 1.5px solid #FBBF24;
+            background-color:unset;
+
+            &:hover {
+              color:#F9FAFB;
+              background-color:#FBBF24;
+            }
+          `)
+    
+      case "green":
+        return (
+          css`
+            color: #34D399;
+            border: 1.5px solid #34D399;
+            background-color:unset;
+
+            &:hover {
+              color:#F9FAFB;
+              background-color:#34D399;
+            }
+          `)
+    
+      case "blue":
+        return (
+          css`
+            color: #3B82F6;
+            border: 1.5px solid #3B82F6;
+            background-color:unset;
+
+            &:hover {
+              color:#F9FAFB;
+              background-color:#3B82F6;
+            }
+          `)
+     
+      case "purple":
+        return (
+          css`
+            color: #8B5CF6;
+            border: 1.5px solid #8B5CF6;
+            background-color:unset;
+
+            &:hover {
+              color:#F9FAFB;
+              background-color:#8B5CF6;
+            }
+          `)
+      case "indigo":
+        return (
+          css`
+            color: #6366F1;
+            border: 1.5px solid #6366F1;
+            background-color:unset;
+
+            &:hover {
+              color:#F9FAFB;
+              background-color:#6366F1;
+            }
+          `)
+      case "pink":
+        return (
+          css`
+            color: #EC4899;
+            border: 1.5px solid #EC4899;
+            background-color:unset;
+
+            &:hover {
+              color:#F9FAFB;
+              background-color:#EC4899;
+            }
+          `)
+      default:
+        return (
+          css`
+            color: #111827;
+            border: 1.5px solid #111827;
+            background-color:unset;
+
+            &:hover {
+              color:#F9FAFB;
+              background-color:#111827;
+            }
+          `)
+  }
+  }
+}
+
+
 
 
 
@@ -122,8 +232,8 @@ const Button = styled.button.attrs(props => (
   cursor:pointer;
   font-family: 'Sora', sans-serif;
   font-size:  ${({size}) => setFontSize(size)};
-  margin: 0.5em;
-  padding: 0.5em 1em;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: ${({rounded}) => roundedBtn(rounded)};
   outline: none;
   transition: all 0.2s ease-in-out;
@@ -133,7 +243,11 @@ const Button = styled.button.attrs(props => (
     background-color: ${ ( { bgColor, color } ) => setHover(bgColor, color)};
   }
 
-  ${({isDisabled})=> themeButton(isDisabled)}
+  ${({isDisabled})=> themeDisabledBtn(isDisabled)}
+
+  ${({outliner, outlinerColor })=> setOutline(outliner, outlinerColor)}
+  /* color: #DC2626;
+  border: 1px solid #DC2626; */
  
 `;
 

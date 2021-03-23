@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test en <Button /> componente <Button /> debe renderizarse correctamente 1`] = `
+.c0 {
+  box-sizing: 'border-box';
+  background-color: #F9FAFB;
+  border: none;
+  box-shadow: none;
+  color: #111827;
+  cursor: pointer;
+  font-family: 'Sora',sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0px;
+  outline: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.c0:hover {
+  background-color: #D1D5DB;
+}
+
+<button
+  class="c0"
+/>
+`;

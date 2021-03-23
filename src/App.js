@@ -39,6 +39,7 @@ function App() {
 					rounded="full"
 					isDisabled
 					full
+					outliner={true}
 					>
 					Button
 				</Button>
