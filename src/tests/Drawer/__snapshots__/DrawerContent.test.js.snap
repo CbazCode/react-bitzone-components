@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test en <DrawerContent /> componente <DrawerContent /> debe renderizarse correctamente sin parametros  1`] = `
+.c0 {
+  display: block;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 30;
+  width: 300px;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -webkit-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  overflow-x: hidden;
+  color: #fafafa;
+  background-color: rgba(5,29,51,0.9);
+  padding: 1rem 2rem;
+  box-shadow: -10px 0px 10px rgba(0,0,0,0.19);
+}
+
+<div
+  className="c0"
+/>
+`;

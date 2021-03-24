@@ -51,15 +51,6 @@ const setBgColor = (bgColor = 'default') => {
   }
 };
 
-const DrawerWrapper = styled.div`
-  display: block;
-  overflow: hidden;
-  width: ${(props) =>
-    props.position !== 'top' && props.position !== 'bottom' && props.size ? props.size : '300px'};
-  height: ${(props) => (props.position === 'top' || props.position === 'bottom') && '100%'};
-  transform: ${(props) => (!props.open ? transforms[props.position] : null)};
-`;
-
 const animation = keyframes`
     from{
         opacity: 0;
@@ -70,8 +61,16 @@ const animation = keyframes`
 
     }
 `;
+export const DrawerWrapper = styled.div`
+  display: block;
+  overflow: hidden;
+  width: ${(props) =>
+    props.position !== 'top' && props.position !== 'bottom' && props.size ? props.size : '300px'};
+  height: ${(props) => (props.position === 'top' || props.position === 'bottom') && '100%'};
+  transform: ${(props) => (!props.open ? transforms[props.position] : null)};
+`;
 
-const DrawerOverlay = styled.div`
+export const DrawerOverlay = styled.div`
   position: fixed;
   top: 0px;
   right: 0px;
@@ -83,7 +82,7 @@ const DrawerOverlay = styled.div`
   display: ${(props) => (props.open ? null : 'none')};
 `;
 
-const DrawerContent = styled.div`
+export const DrawerContent = styled.div`
   display: block;
   box-sizing: border-box;
   position: fixed;
@@ -104,7 +103,7 @@ const DrawerContent = styled.div`
   padding: 1rem 2rem;
   box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.19);
 `;
-const ButtonExit = styled.button`
+export const ButtonExit = styled.button`
   position: absolute;
   top: 15px;
   right: 15px;
@@ -125,26 +124,27 @@ const ButtonExit = styled.button`
     color: #d1d1d1;
   }
 `;
-const Drawer = ({ open, size, position, onDismiss, backgroundColor, children, buttonExit }) => {
+const Drawer = ({
+  open = false,
+  size,
+  position = 'right',
+  onDismiss,
+  backgroundColor = 'default',
+  children,
+  buttonExit,
+}) => {
   return (
-    <div>
-      <DrawerWrapper open={open} size={size} position={position}>
-        <DrawerOverlay open={open} onClick={onDismiss} />
-        <DrawerContent
-          open={open}
-          size={size}
-          position={position}
-          backgroundColor={backgroundColor}
-        >
-          {buttonExit ? (
-            <ButtonExit>
-              <MdClose onClick={onDismiss}/>
-            </ButtonExit>
-          ) : null}
-          {children}
-        </DrawerContent>
-      </DrawerWrapper>
-    </div>
+    <DrawerWrapper open={open} size={size} position={position}>
+      <DrawerOverlay open={open} onClick={onDismiss} />
+      <DrawerContent open={open} size={size} position={position} backgroundColor={backgroundColor}>
+        {buttonExit ? (
+          <ButtonExit onClick={onDismiss}>
+            <MdClose  />
+          </ButtonExit>
+        ) : null}
+        {children}
+      </DrawerContent>
+    </DrawerWrapper>
   );
 };
 
