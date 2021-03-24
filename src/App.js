@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import './app.css';
-import { Button, Skeleton, Slider, Switch } from './components';
+import { Button, Modal, Skeleton, Slider, Switch } from './components';
 
 function App() {
+
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(prev => !prev);
+  };
+
   const [value, setValue] = useState(5);
 
   return (
@@ -60,6 +67,16 @@ function App() {
           Button
         </Button>
         <Switch id="idTest" name="test" bgColor="green" defaultRight />
+
+        <Button bgColor="red" isShadow={true} size="md" rounded="soft" onClick={openModal}>
+          I'am modal
+        </Button>
+        <Modal showModal={showModal} setShowModal={setShowModal} appear="top">
+          {/* withImagen left top bottom right */}
+          <Button bgColor="indigo" isShadow={true} size="md">
+            Button
+          </Button>
+        </Modal>
       </div>
 
       <div style={{ display: 'flex', width: '100%', padding: '1rem 2rem' }}>

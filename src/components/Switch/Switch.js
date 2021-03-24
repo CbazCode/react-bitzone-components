@@ -80,6 +80,7 @@ const setSizeLabel = (size) => {
 };
 
 export const SwitchContainer = styled.div`
+  margin: 0.5rem;
   .checkbox:checked + .label .ball {
     transform: ${({ defaultRight }) => setDefaultChekedBall(defaultRight)};
   }
@@ -93,6 +94,7 @@ export const InputSwitch = styled.input.attrs((props) => ({
   required: props.isRequired,
   name: props.name,
 }))`
+  position: absolute;
   opacity: 0;
 `;
 export const LabelSwitch = styled.label.attrs((props) => ({

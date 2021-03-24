@@ -18,7 +18,7 @@ const setBgColor = (bgColor = 'default') => {
     case 'pink':
       return '#EC4899';
     default:
-      return '#F9FAFB';
+      return '#9CA3AF';
   }
 };
 
@@ -78,7 +78,7 @@ const setHover = (bgColor = 'default', color = 'default') => {
     case 'pink':
       return isWhite ? '#BE185D' : '#F472B6';
     default:
-      return '#D1D5DB';
+      return isWhite ? '#000' : '#D1D5DB';
   }
 };
 
