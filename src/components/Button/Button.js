@@ -94,7 +94,7 @@ const themeDisabledBtn = (isDisabled) =>
   isDisabled &&
   css`
     opacity: 0.5;
-    &:hover {
+    &:hover { 
       opacity: 0.5;
     }
   `;

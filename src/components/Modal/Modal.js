@@ -1,10 +1,11 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { Background, CloseModalButton, ModalBody, ModalContent, ModalHeader, ModalImg, ModalWrapper } from './ModalElements';
-// import Button from '../Button/Button'
-import img from './modal.jpg'
-const Modal = ({ showModal, setShowModal, children, appear}) => {
-    const modalRef = useRef();
+import { Background, CloseModalButton,  ModalContent, ModalImg, ModalWrapper } from './ModalElements';
+
+
+
+const Modal = ({ showModal, setShowModal, children,appear, withImage, sourceImage}) => { 
+    const modalRef = useRef(); 
 
     const selectTransform = (appear, showModal) => {
         switch (appear) {
@@ -12,10 +13,12 @@ const Modal = ({ showModal, setShowModal, children, appear}) => {
                 return showModal ? `translateY(0%)` : `translateY(-100%)`
             case "bottom":
                 return showModal ? `translateY(0%)` : `translateY(100%)`
-             case "right":
+            case "right":
                 return showModal ? `translateX(0%)` : `translateX(100%)`
-             case "left":
-                return showModal ? `translateX(0%)` : `translateX(-100%)`            
+            case "left":
+                return showModal ? `translateX(0%)` : `translateX(-100%)`    
+            case "fadeIn":
+                return showModal ? `none` : `none`         
             default:
                 return showModal ? `translateY(0%)` : `translateY(-100%)`
         }
@@ -26,8 +29,8 @@ const Modal = ({ showModal, setShowModal, children, appear}) => {
         duration: 500
       },
       opacity: showModal ? 1 : 0,
-    //   transform: showModal ? `translateX(0%)` : `translateX(100%)`
-      transform: selectTransform(appear, showModal)
+      // transform: showModal ? `scale(1)` : `scale(0.5)`
+      transform: selectTransform(appear, showModal),
     });
   
     const closeModal = e => {
@@ -59,17 +62,15 @@ const Modal = ({ showModal, setShowModal, children, appear}) => {
         {showModal ? (
           <Background onClick={closeModal} ref={modalRef}>
             <animated.div style={animation}>
-              <ModalWrapper showModal={showModal}>
-                  {
-                      false &&
-                      <ModalImg src={img} alt='camera' />
-                  }
+              <ModalWrapper showModal={showModal} withImage={withImage}>
+                  
                 <ModalContent>
-                  <ModalHeader>Are you ready?</ModalHeader>
-                  <ModalBody>Get exclusive access to our next launch. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis minima ratione placeat facere illo fuga non id aliquam cumque molestias! pruebbda dasdasda asd asdasdadadafasfafafasfafafaf Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni incidunt excepturi quae.</ModalBody>
-                  {/* <Button color="white" bgColor="red" size="xl" rounded="full">Join Now</Button> */}
                   {children}
                 </ModalContent>
+                {
+                  withImage &&
+                  <ModalImg src={sourceImage} alt='camera' />// eslint-disable-line no-unused-vars
+                }
                 <CloseModalButton
                   aria-label='Close modal'
                   onClick={() => setShowModal(prev => !prev)}

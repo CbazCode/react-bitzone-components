@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import './app.css';
 import { Button, Modal, Skeleton, Slider, Switch } from './components';
+// import sourceImage from './components/Modal/modal.jpg'
+import { ModalBody, ModalHeader } from './components/Modal/ModalElements';
+import useModal from './components/Modal/modalHook';
 
 function App() {
 
-  const [showModal, setShowModal] = useState(false);
 
-  const openModal = () => {
-    setShowModal(prev => !prev);
-  };
-
+  const {showModal, openModal, setShowModal} = useModal();
   const [value, setValue] = useState(5);
 
   return (
@@ -71,9 +70,11 @@ function App() {
         <Button bgColor="red" isShadow={true} size="md" rounded="soft" onClick={openModal}>
           I'am modal
         </Button>
-        <Modal showModal={showModal} setShowModal={setShowModal} appear="top">
-          {/* withImagen left top bottom right */}
-          <Button bgColor="indigo" isShadow={true} size="md">
+      
+        <Modal showModal={showModal} setShowModal={setShowModal} appear="top" >
+          <ModalHeader>Are you ready?</ModalHeader>
+          <ModalBody>Get exclusive access to our next launch. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis minima ratione placeat facere illo fuga non id aliquam cumque molestias! </ModalBody>
+          <Button bgColor="indigo" isShadow={true} size="xl" rounded="full">
             Button
           </Button>
         </Modal>

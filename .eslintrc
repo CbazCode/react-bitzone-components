@@ -13,6 +13,7 @@
 	"rules": {
 		"no-console": "warn",
 		"no-eval": "error",
-		"import/first": "error"
+		"import/first": "error",
+		"react/react-in-jsx-scope":"off"
 	}
 }
