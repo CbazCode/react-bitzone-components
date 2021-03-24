@@ -89,7 +89,7 @@ function App() {
 				>
 					Button
 				</Button>
-				<Switch id="koshi"  name="test" bgColor="green"/>
+				<Switch id="idTest"  name="test" bgColor="green" defaultRight/>
 			</div>
 
 			

@@ -6,12 +6,12 @@ import styled, { createGlobalStyle, css } from "styled-components";
 
 
 //We have id customize !!
-//We have disabled
-//We have checked we need an onchange
-//We have default checked
-//We have isRequired!!
-//We have name!!
-//We have size !!
+//We have disabled  --- 
+//We have checked we need an onchange  ---
+//We have default checked --
+//We have isRequired!! --
+//We have name!! --
+//We have size !! --
 //We have color
 
 
@@ -38,14 +38,14 @@ const setBgColor = (bgColor = "default")=> {
 }
 
 
-const setDefaultCheked = (defaultCheked) => {
-    console.log('setdf'+defaultCheked)
-    return !defaultCheked ?  'none' : 'translateX(24px)'
+const setDefaultCheked = (defaultRight) => {
+
+    return !defaultRight ?  'none' : 'translateX(24px)'
 }
 
-const setDefaultChekedBall = (defaultCheked) => {
-    console.log('setdfball'+defaultCheked)
-    return !defaultCheked ?  'translateX(24px)': 'none'
+const setDefaultChekedBall = (defaultRight) => {
+  
+    return !defaultRight ?  'translateX(24px)': 'none'
 }
 
 const setSizeBall = (size) => {
@@ -96,7 +96,7 @@ const setSizeLabel = (size)=>{
 
 export const SwitchContainer = styled.div`
     .checkbox:checked + .label .ball{
-        transform: ${({defaultCheked})=> setDefaultChekedBall(defaultCheked)}
+        transform: ${({defaultRight})=> setDefaultChekedBall(defaultRight)}
 
     }
 `
@@ -118,7 +118,7 @@ export const InputSwitch = styled.input.attrs((props) => (
 `
 export const LabelSwitch = styled.label.attrs((props)=>(
     {
-        for:props.htmlFor
+        htmlFor:props.htmlFor
     }
 ))
 `
@@ -143,7 +143,7 @@ export const Ball = styled.div`
 	height: ${({size})=> setSizeBall(size)};
 	width: ${({size})=> setSizeBall(size)};
 	transition: transform 0.2s linear;
-    transform: ${({defaultCheked})=> setDefaultCheked(defaultCheked)};
+    transform: ${({defaultRight})=> setDefaultCheked(defaultRight)};
 
 `
 

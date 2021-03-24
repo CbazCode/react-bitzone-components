@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test en <Switch /> Debe renderizarse el componente por defecto 1`] = `
+.c0 .checkbox:checked + .label .ball {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+.c1 {
+  opacity: 0;
+}
+
+.c2 {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.c3 {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  -webkit-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+<div
+  class="c0"
+>
+  <input
+    class="c1 checkbox"
+    type="checkbox"
+  />
+  <label
+    class="c2 label"
+  >
+    <div
+      class="c3 ball"
+    />
+  </label>
+</div>
+`;
