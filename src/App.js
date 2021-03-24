@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import './app.css';
-import { Button, Skeleton, Slider, Switch } from './components';
+import { Button, Drawer, Skeleton, Slider, Switch } from './components';
 
 function App() {
   const [value, setValue] = useState(5);
-
+  const [isOpen, setisOpen] = useState(false);
   return (
     <>
       {/* EJEMPLO SKELETON */}
       <div className="container">
-        {/* Linea individual */}
+        {/* Linea individual*/}
         <Skeleton height="20px" />
         {/* Skeleton con texto */}
         <Skeleton>
@@ -85,6 +85,22 @@ function App() {
 
         <h1>{value}</h1>
       </div>
+
+      <Button bgColor="blue" color="white" size="xl" rounded="full" onClick={() => setisOpen(true)}>
+        Button
+      </Button>
+
+      <Drawer
+        open={isOpen}
+        onDismiss={() => setisOpen(false)}
+        position="right"
+        backgroundColor="red"
+        size="350px"
+      >
+        <h1>Test</h1>
+      </Drawer>
+
+      
     </>
   );
 }
