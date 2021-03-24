@@ -62,7 +62,7 @@ const Modal = ({ showModal, setShowModal, children,appear, withImage, sourceImag
         {showModal ? (
           <Background onClick={closeModal} ref={modalRef}>
             <animated.div style={animation}>
-              <ModalWrapper showModal={showModal} withImage={withImage}>
+              <ModalWrapper  withImage={withImage}>
                   
                 <ModalContent>
                   {children}

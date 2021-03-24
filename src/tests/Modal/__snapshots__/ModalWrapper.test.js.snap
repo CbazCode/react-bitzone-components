@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente <ModalWrapper/> debe renderizarse el componente correctamente 1`] = `
+.c0 {
+  width: 400px;
+  font-family: 'Sora',sans-serif;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.2);
+  background: #fff;
+  color: #000;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+@media screen and (max-width:930px) {
+  .c0 {
+    grid-template-columns: 1fr;
+    width: 400px;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;

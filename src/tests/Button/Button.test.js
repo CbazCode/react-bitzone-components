@@ -12,7 +12,7 @@ describe('Test en <Button />', () => {
 
   test('componente debe funcionar con parametros por defecto', () => {
     const button = renderer.create(<Button />).toJSON();
-    expect(button).toHaveStyleRule('background-color', '#F9FAFB');
+    expect(button).toHaveStyleRule('background-color', '#9CA3AF');
     expect(button).toHaveStyleRule('border', 'none');
     expect(button).toHaveStyleRule('box-shadow', 'none');
     expect(button).toHaveStyleRule('color', '#111827');
@@ -80,13 +80,13 @@ describe('Test en <Button />', () => {
       .toJSON();
 
     expect(button).toHaveStyleRule('box-shadow', 'none');
-    expect(button).toHaveStyleRule('color', '#DC2626');
+    expect(button).toHaveStyleRule('color', '#dc2626');
     expect(button).toHaveStyleRule('margin', '0.5rem');
     expect(button).toHaveStyleRule('padding', '0.5rem 1rem');
     expect(button).toHaveStyleRule('border-radius', '0px');
     expect(button).toHaveStyleRule('outline', 'none');
     expect(button).toHaveStyleRule('transition', 'all 0.2s ease-in-out');
-    expect(button).toHaveStyleRule('border', '1.5px solid #DC2626');
+    expect(button).toHaveStyleRule('border', '1.5px solid #dc2626');
     expect(button).toHaveStyleRule('background-color', 'unset');
     expect(button).toHaveStyleRule(
       `&:hover{ color: #F9FAFB; background-color:#DC2626; }`
@@ -95,7 +95,7 @@ describe('Test en <Button />', () => {
 
   test('componente debe tener el ancho del 100% de su contenedor', () => {
     const button = renderer.create(<Button full />).toJSON();
-    expect(button).toHaveStyleRule('background-color', '#F9FAFB');
+    expect(button).toHaveStyleRule('background-color', '#9CA3AF');
     expect(button).toHaveStyleRule('border', 'none');
     expect(button).toHaveStyleRule('box-shadow', 'none');
     expect(button).toHaveStyleRule('color', '#111827');
@@ -110,7 +110,7 @@ describe('Test en <Button />', () => {
 
   test('componente debe tener el border-radius escogido por el usuario', () => {
     const button = renderer.create(<Button rounded="full" />).toJSON();
-    expect(button).toHaveStyleRule('background-color', '#F9FAFB');
+    expect(button).toHaveStyleRule('background-color', '#9CA3AF');
     expect(button).toHaveStyleRule('border', 'none');
     expect(button).toHaveStyleRule('box-shadow', 'none');
     expect(button).toHaveStyleRule('color', '#111827');
@@ -124,7 +124,7 @@ describe('Test en <Button />', () => {
 
   test('componente debe tener el tamaño de fuente escogida por el usuario', () => {
     const button = renderer.create(<Button size="lg" />).toJSON();
-    expect(button).toHaveStyleRule('background-color', '#F9FAFB');
+    expect(button).toHaveStyleRule('background-color', '#9CA3AF');
     expect(button).toHaveStyleRule('border', 'none');
     expect(button).toHaveStyleRule('box-shadow', 'none');
     expect(button).toHaveStyleRule('font-size', '1.125rem');
@@ -146,7 +146,7 @@ describe('Test en <Button />', () => {
     const { container } = render(<Button isDisabled />);
     expect(container.firstChild).toBeDisabled();
     const button = renderer.create(<Button isDisabled />).toJSON();
-    expect(button).toHaveStyleRule('background-color', '#F9FAFB');
+    expect(button).toHaveStyleRule('background-color', '#9CA3AF');
     expect(button).toHaveStyleRule('border', 'none');
     expect(button).toHaveStyleRule('box-shadow', 'none');
     expect(button).toHaveStyleRule('font-size', '1rem');

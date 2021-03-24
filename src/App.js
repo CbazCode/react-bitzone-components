@@ -70,7 +70,7 @@ function App() {
           I'am modal
         </Button>
       
-        <Modal showModal={showModal} setShowModal={setShowModal} appear="top" >
+        <Modal showModal={showModal} setShowModal={setShowModal}  >
           <ModalHeader>Are you ready?</ModalHeader>
           <ModalBody>Get exclusive access to our next launch. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis minima ratione placeat facere illo fuga non id aliquam cumque molestias! </ModalBody>
           <Button bgColor="indigo" isShadow={true} size="xl" rounded="full">

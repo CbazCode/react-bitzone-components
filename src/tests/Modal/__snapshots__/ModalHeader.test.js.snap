@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente <ModalHeader/> debe renderizarse el componente correctamente 1`] = `
+.c0 {
+  font-size: 2rem;
+}
+
+<h1
+  className="c0"
+/>
+`;
