@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-
+import { MdClose } from 'react-icons/md';
 const transforms = {
   top: 'translateY(-100%)',
   right: 'translateX(100%)',
@@ -97,15 +97,35 @@ const DrawerContent = styled.div`
       : '100%'};
 
   transform: ${(props) => (!props.open ? transforms[props.position] : null)};
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
   overflow-x: hidden;
   color: #fafafa;
   background-color: ${(props) => setBgColor(props.backgroundColor) || '#fff'};
   padding: 1rem 2rem;
   box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.19);
 `;
-
-const Drawer = ({ open, size, position, onDismiss, backgroundColor, children }) => {
+const ButtonExit = styled.button`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  ${(props) => placements[props.position]}
+  z-index: 30;
+  color: #fff;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in;
+  &:hover {
+    color: #d1d1d1;
+  }
+  &:active {
+    transform: scale(0.9);
+    color: #d1d1d1;
+  }
+`;
+const Drawer = ({ open, size, position, onDismiss, backgroundColor, children, buttonExit }) => {
   return (
     <div>
       <DrawerWrapper open={open} size={size} position={position}>
@@ -116,6 +136,11 @@ const Drawer = ({ open, size, position, onDismiss, backgroundColor, children }) 
           position={position}
           backgroundColor={backgroundColor}
         >
+          {buttonExit ? (
+            <ButtonExit>
+              <MdClose onClick={onDismiss}/>
+            </ButtonExit>
+          ) : null}
           {children}
         </DrawerContent>
       </DrawerWrapper>

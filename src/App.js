@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import './app.css';
-import { Button, Modal,Drawer, Skeleton, Slider, Switch } from './components';
+import { Button, Modal, Drawer, Skeleton, Slider, Switch } from './components';
 
 function App() {
-
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
-    setShowModal(prev => !prev);
+    setShowModal((prev) => !prev);
   };
 
   const [value, setValue] = useState(5);
@@ -110,14 +109,36 @@ function App() {
       <Drawer
         open={isOpen}
         onDismiss={() => setisOpen(false)}
-        position="right"
-        backgroundColor="red"
+        position="bottom"
+        backgroundColor="default"
         size="350px"
+        buttonExit
       >
-        <h1>Test</h1>
+        {/* Edicion libre */}
+        <div
+          style={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '1rem',
+          }}
+        >
+          <div>
+            <h1>Test</h1>
+            <hr />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, reprehenderit unde, quas
+            facere aspernatur, sint iste voluptates ut eum nulla quasi beatae non reiciendis sequi
+            corporis cupiditate quae mollitia! Animi? Illum ea error nemo, perspiciatis iusto, velit
+            esse sequi cum possimus incidunt vero, delectus eaque ipsum ducimus eum expedita rem
+            voluptatem eligendi facere temporibus nesciunt quaerat eveniet aliquam! Atque, sint.
+          </p>
+          <Button bgColor="red" color="white" size="xl" onClick={() => setisOpen(false)}>
+            Grabar
+          </Button>
+        </div>
       </Drawer>
-
-      
     </>
   );
 }
