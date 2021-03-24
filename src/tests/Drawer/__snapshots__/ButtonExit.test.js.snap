@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test en <ButtonExit /> componente <ButtonExit /> debe renderizarse correctamente sin parametros  1`] = `
+.c0 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 30;
+  color: #fff;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.1s ease-in;
+  -webkit-transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in;
+}
+
+.c0:hover {
+  color: #d1d1d1;
+}
+
+.c0:active {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  color: #d1d1d1;
+}
+
+<button
+  className="c0"
+/>
+`;

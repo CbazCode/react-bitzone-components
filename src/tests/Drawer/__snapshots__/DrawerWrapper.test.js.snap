@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test en <DrawerWrapper /> componente <DrawerOverlay /> debe renderizarse correctamente sin parametros  1`] = `
+.c0 {
+  display: block;
+  overflow: hidden;
+  width: 300px;
+}
+
+<div
+  className="c0"
+/>
+`;

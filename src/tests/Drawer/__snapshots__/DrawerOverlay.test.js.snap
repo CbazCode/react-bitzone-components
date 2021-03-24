@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test en <DrawerOverlay /> componente <DrawerOverlay /> debe renderizarse correctamente sin parametros  1`] = `
+.c0 {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 20;
+  -webkit-animation: horNPL 0.5s linear forwards;
+  animation: horNPL 0.5s linear forwards;
+  display: none;
+}
+
+<div
+  className="c0"
+/>
+`;
