@@ -13,6 +13,7 @@ const entry = keyframes`
       opacity:1;
       background: rgba(0, 0, 0, 0.8);
       
+      
   }
 `;
 
