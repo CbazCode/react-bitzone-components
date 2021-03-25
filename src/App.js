@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import './app.css';
-import { Button, Modal, Drawer, Skeleton, Slider, Switch } from './components';
+import { Button, Modal, Drawer, Skeleton, Slider, Switch, Input } from './components';
 // import sourceImage from './components/Modal/modal.jpg'
 import { ModalBody, ModalHeader } from './components/Modal/ModalElements';
 import useModal from './components/Modal/modalHook';
 
 function App() {
-
   const {showModal, openModal, setShowModal} = useModal();
   const [value, setValue] = useState(5);
   const [isOpen, setisOpen] = useState(false);
@@ -77,6 +76,8 @@ function App() {
             Button
           </Button>
         </Modal>
+
+        <Input bgColor="purple" color="white" full placeholder="Escribe aqui!" type="email"/>
       </div>
 
       <div style={{ display: 'flex', width: '100%', padding: '1rem 2rem' }}>
@@ -140,6 +141,8 @@ function App() {
           </Button>
         </div>
       </Drawer>
+
+      
     </>
   );
 }
