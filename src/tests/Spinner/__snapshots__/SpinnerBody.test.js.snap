@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en compnente <SpinnerBody/> debe renderizarse correctamente 1`] = `
+.c0 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+<div
+  class="c0"
+/>
+`;
