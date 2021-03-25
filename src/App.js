@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './app.css';
-import { Button, Modal, Drawer, Skeleton, Slider, Switch } from './components';
+import { Button, Modal, Drawer, Skeleton, Slider, Switch, Spinner } from './components';
 // import sourceImage from './components/Modal/modal.jpg'
 import { ModalBody, ModalHeader } from './components/Modal/ModalElements';
 import useModal from './components/Modal/modalHook';
@@ -77,6 +77,7 @@ function App() {
             Button
           </Button>
         </Modal>
+        <Spinner size="sm" color="yellow"/>
       </div>
 
       <div style={{ display: 'flex', width: '100%', padding: '1rem 2rem' }}>
