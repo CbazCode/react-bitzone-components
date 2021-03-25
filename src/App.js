@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import './app.css';
-import { Button, Modal, Drawer, Skeleton, Slider, Switch, Spinner } from './components';
+import { Button, Modal, Drawer, Skeleton, Slider, Switch, Spinner,Input} from './components';
 // import sourceImage from './components/Modal/modal.jpg'
 import { ModalBody, ModalHeader } from './components/Modal/ModalElements';
 import useModal from './components/Modal/modalHook';
 
 function App() {
-
   const {showModal, openModal, setShowModal} = useModal();
   const [value, setValue] = useState(5);
   const [isOpen, setisOpen] = useState(false);
@@ -78,9 +77,13 @@ function App() {
           </Button>
         </Modal>
         <Spinner size="sm" color="yellow"/>
+
+        <Input bgColor="purple" color="white" full placeholder="Escribe aqui!" type="email"/>
+
+        
       </div>
 
-      <div style={{ display: 'flex', width: '100%', padding: '1rem 2rem' }}>
+      <div style={{ display: 'flex', width: '100%', padding: '1rem 2rem'}}>
         <Slider
           min={0}
           max={500}
@@ -91,18 +94,11 @@ function App() {
           onChange={(e) => setValue(e.target.value)}
           full
         />
-        <Slider
-          min={0}
-          max={500}
-          step={1}
-          orientation="vertical"
-          bgThumb="blue"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
+        
 
         <h1>{value}</h1>
       </div>
+      
 
       <Button bgColor="blue" color="white" size="xl" rounded="full" onClick={() => setisOpen(true)}>
         Button
@@ -141,6 +137,8 @@ function App() {
           </Button>
         </div>
       </Drawer>
+
+      
     </>
   );
 }

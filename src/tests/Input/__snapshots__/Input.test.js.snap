@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test en <Input /> componente <Input /> debe renderizarse correctamente 1`] = `
+.c0 {
+  background-color: #9CA3AF;
+  border: none;
+  box-shadow: none;
+  color: #111827;
+  cursor: pointer;
+  font-family: 'Sora',sans-serif;
+  font-size: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0px;
+  outline: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.c0:hover {
+  background-color: #D1D5DB;
+}
+
+.c0::-webkit-input-placeholder {
+  color: #dedede;
+}
+
+.c0::-moz-placeholder {
+  color: #dedede;
+}
+
+.c0:-ms-input-placeholder {
+  color: #dedede;
+}
+
+.c0::placeholder {
+  color: #dedede;
+}
+
+<input
+  class="c0"
+/>
+`;
