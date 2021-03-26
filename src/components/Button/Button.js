@@ -1,5 +1,20 @@
 import styled, { css } from 'styled-components';
 
+// @atributes
+
+// color = "white" - default 
+// bgColor = "red" - "yellow" - "green" - "blue" - "purple" - "indigo" - "pink" - default
+// rounded = "soft" - "full" - default
+// size = "sm" - "md"(default) - "lg" - "xl"
+// isShadow = {true} - {false}
+// full = {true} - {false}
+// isDisabled = {true} - {false}
+// outliner = {true} - {false}
+// outlinerColor = "red" - "yellow" - "green" - "blue" - "purple" - "indigo" - "pink" - default
+
+
+
+
 //Establece el background del boton
 const setBgColor = (bgColor = 'default') => {
   switch (bgColor) {
@@ -47,6 +62,8 @@ const setFontSize = (size) => {
       return '1.25rem';
     case 'lg':
       return '1.125rem';
+    case 'md':
+      return '1rem';
     case 'sm':
       return '0.875rem';
     default:
