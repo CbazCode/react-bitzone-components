@@ -30,9 +30,9 @@ exports[`Test en <Slider /> componente <Slider /> debe renderizarse correctament
   background: #4caf50;
   border-radius: 50%;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 0.15s ease-in-out;
-  -webkit-transition: transform 0.15s ease-in-out;
-  transition: transform 0.15s ease-in-out;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
+  -webkit-transition: transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
+  transition: transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
 }
 
 .c0:active::-webkit-slider-thumb {
@@ -48,9 +48,9 @@ exports[`Test en <Slider /> componente <Slider /> debe renderizarse correctament
   border-radius: 50%;
   background: #4caf50;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 0.15s ease-in-out;
-  -webkit-transition: transform 0.15s ease-in-out;
-  transition: transform 0.15s ease-in-out;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
+  -webkit-transition: transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
+  transition: transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
 }
 
 .c0:active::-moz-range-thumb {

@@ -43,7 +43,7 @@ describe('Test en <Slider />', () => {
     expect(wrapper).toHaveStyleRule('cursor', 'pointer', {
       modifier: '::-webkit-slider-thumb',
     });
-    expect(wrapper).toHaveStyleRule('transition', 'transform 0.15s ease-in-out', {
+    expect(wrapper).toHaveStyleRule('transition', 'transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out', {
       modifier: '::-webkit-slider-thumb',
     });
     //Evaluar focus - chrome
@@ -70,7 +70,7 @@ describe('Test en <Slider />', () => {
     expect(wrapper).toHaveStyleRule('cursor', 'pointer', {
       modifier: '::-moz-range-thumb',
     });
-    expect(wrapper).toHaveStyleRule('transition', 'transform 0.15s ease-in-out', {
+    expect(wrapper).toHaveStyleRule('transition', 'transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out', {
       modifier: '::-moz-range-thumb',
     });
     //Evaluar focus - mozilla

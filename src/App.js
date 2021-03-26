@@ -1,17 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './app.css';
 import { Button, Modal, Drawer, Skeleton, Slider, Switch, Spinner,Input} from './components';
 // import sourceImage from './components/Modal/modal.jpg'
 import { ModalBody, ModalHeader } from './components/Modal/ModalElements';
 import useModal from './components/Modal/modalHook';
 
+import Avatar from './assets/img/avatar.jpg'
 function App() {
   const {showModal, openModal, setShowModal} = useModal();
   const [value, setValue] = useState(5);
   const [isOpen, setisOpen] = useState(false);
+  const [temp, setTemp] = useState(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setTemp(false);
+    }, 4000);
+  }, [])
   return (
-    <>
-      {/* EJEMPLO SKELETON */}
+    <div className="wrapper">
+      {/* Ejemplos SKELETON */}
       <div className="container">
         {/* Linea individual*/}
         <Skeleton height="20px" />
@@ -27,6 +34,7 @@ function App() {
         {/* Circulo sin parametros */}
         <Skeleton type="CIRCLE" />
 
+
         {/* Circulo al lado de parrafo */}
         <div style={{ display: 'flex', width: '100%' }}>
           <Skeleton type="CIRCLE" size={5} />
@@ -34,7 +42,20 @@ function App() {
             <Skeleton height="20px" />
             <Skeleton height="20px" />
           </div>
-        </div>
+        </div> 
+        {temp ? <div style={{ display: 'flex', width: '100%' }}>
+          <Skeleton type="CIRCLE" size={5} />
+          <div style={{ width: '100%' }}>
+            <Skeleton height="20px" />
+            <Skeleton height="20px" />
+          </div>
+        </div> : <div style={{ display: 'flex', width: '100%' }}>
+          <img src={Avatar} alt="temp" style={{width:'50px',height:'50px', borderRadius:'50%'}}/>
+          <div style={{ width: '100%', padding:'10px 15px'}}>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A iusto, quod sunt magni saepe animi assumenda adipisci deleniti laudantium harum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quos dolorum rerum perferendis provident doloribus quae vel in mollitia autem.</p>
+          </div>
+        </div>}
         <Button
           bgColor="red"
           color="white"
@@ -78,7 +99,26 @@ function App() {
         </Modal>
         <Spinner size="sm" color="yellow"/>
 
-        <Input bgColor="purple" color="white" full placeholder="Escribe aqui!" type="email"/>
+        
+        {/* Ejemplos Input */}
+        {/* Input por defecto */}
+        <Input  placeholder="Escribe aqui!" type="email"/>
+        {/* Input con background y color */}
+        <Input bgColor="purple" color="white" placeholder="Escribe aqui!" type="email"/>
+        {/* input con size establecido */}
+        <Input size="xl" bgColor="green" color="white" placeholder="Escribe aqui!" type="email"/>
+        {/* input full width */}
+        <Input full bgColor="yellow" color="white" placeholder="Escribe aqui!" type="email"/>
+        {/* input con sombras */}
+        <Input isShadow bgColor="yellow" color="white" placeholder="Escribe aqui!" type="email"/>
+        {/* input con border radius */}
+        <Input rounded="full" bgColor="blue" color="white" placeholder="Escribe aqui!" type="email"/>
+        {/* input deshabilitado */}
+        <Input isDisabled bgColor="red" color="white" placeholder="Escribe aqui!" type="email"/>
+        {/* input con outline */}
+        <Input outliner outlinerColor="red" bgColor="red" placeholder="Escribe aqui!" type="email"/>
+
+        
 
         
       </div>
@@ -139,7 +179,7 @@ function App() {
       </Drawer>
 
       
-    </>
+    </div>
   );
 }
 

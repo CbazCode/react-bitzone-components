@@ -63,7 +63,7 @@ const Slider = styled.input.attrs((props) => ({
     background: ${(props) => setBgColor(props.bgThumb)};
     border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, box-shadow 0.25s ease-in-out;
   }
   &:active::-webkit-slider-thumb {
     transform: scale(1.1);
@@ -78,7 +78,7 @@ const Slider = styled.input.attrs((props) => ({
     border-radius: 50%;
     background: ${(props) => setBgColor(props.bgThumb)};
     cursor: pointer;
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, box-shadow 0.25s ease-in-out;
   }
   &:active::-moz-range-thumb {
     transform: scale(1.1);
