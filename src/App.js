@@ -60,8 +60,8 @@ function App() {
         <Button bgColor="purple" color="white" isShadow={true} size="sm" rounded="soft">
           Button
         </Button>
-        <Button bgColor="indigo" isShadow={true} size="md">
-          Button
+        <Button bgColor="indigo" color="white" isShadow={true} size="xl" rounded="full" >
+          Julio
         </Button>
         <Switch id="idTest" name="test" bgColor="green" defaultRight />
 
@@ -69,6 +69,7 @@ function App() {
           I'am modal
         </Button>
       
+        <Button full rounded="full" color="white" bgColor="green">Prueba</Button>
         <Modal showModal={showModal} setShowModal={setShowModal}  >
           <ModalHeader>Are you ready?</ModalHeader>
           <ModalBody>Get exclusive access to our next launch. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis minima ratione placeat facere illo fuga non id aliquam cumque molestias! </ModalBody>
@@ -103,7 +104,6 @@ function App() {
       <Button bgColor="blue" color="white" size="xl" rounded="full" onClick={() => setisOpen(true)}>
         Button
       </Button>
-
       <Drawer
         open={isOpen}
         onDismiss={() => setisOpen(false)}

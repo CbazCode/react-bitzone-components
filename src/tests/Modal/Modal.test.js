@@ -11,5 +11,4 @@ describe('Pruebas en el componente <Modal/>', () => {
         const { container } = render(<Modal showModal={true}/>);
         expect(container.firstChild).toMatchSnapshot();
     })
-    
 })

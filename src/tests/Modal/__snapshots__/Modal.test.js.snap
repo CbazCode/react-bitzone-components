@@ -12,8 +12,8 @@ exports[`Pruebas en el componente <Modal/> debe renderizarse el componente corre
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation: iwwYms 0.6s ease-in-out forwards;
-  animation: iwwYms 0.6s ease-in-out forwards;
+  -webkit-animation: gSSTpm 0.6s ease-in-out forwards;
+  animation: gSSTpm 0.6s ease-in-out forwards;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
