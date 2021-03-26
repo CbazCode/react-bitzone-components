@@ -1,6 +1,6 @@
 import { Ball, InputSwitch, LabelSwitch, SwitchContainer } from './Switch';
 
-const Switch = ({ id, isDisabled, isChecked, defaultRight, isRequired, name, size, bgColor }) => {
+const Switch = ({ id =`${Math.random().toPrecision(4)}`, isDisabled, isChecked, defaultRight, isRequired, name, size, bgColor }) => {
   return (
     <SwitchContainer defaultRight={defaultRight}>
       <InputSwitch
