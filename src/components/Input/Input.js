@@ -106,7 +106,8 @@ const setOutline = (outliner, outlinerColor) => {
     switch (outlinerColor) {
       case 'red':
         return css`
-          color: #dc2626;
+          color: #dc2626 ;
+          
           border: 1.5px solid #dc2626;
           background-color: unset;
 
@@ -198,24 +199,24 @@ const setOutline = (outliner, outlinerColor) => {
     }
   }
 };
-const setPlaceHolderColor = (bgColor)=>{
+const setPlaceHolderColor = (bgColor,outliner=false)=>{
     switch (bgColor) {
         case 'red':
-          return '#ffc7c7';
+          return outliner ? '#777' : '#ffc7c7';
         case 'yellow':
-          return '#f2e1b3';
+          return outliner ? '#777' :'#f2e1b3';
         case 'green':
-          return '#d1e0db';
+          return outliner ? '#777' :'#d1e0db';
         case 'blue':
-          return '#cadcfa';
+          return outliner ? '#777' :'#cadcfa';
         case 'purple':
-          return '#e0d4fa';
+          return outliner ? '#777' :'#e0d4fa';
         case 'indigo':
-          return '#dadbf0';
+          return outliner ? '#777' :'#dadbf0';
         case 'pink':
-          return '#f0d3e1';
+          return outliner ? '#777' :'#f0d3e1';
         default:
-          return '#dedede';
+          return outliner ? '#777' :'#dedede';
     }
 }
 const Input = styled.input.attrs((props) => ({
@@ -244,7 +245,7 @@ const Input = styled.input.attrs((props) => ({
 
   ${({ outliner, outlinerColor }) => setOutline(outliner, outlinerColor)}
   &::placeholder{
-      color:${({ bgColor }) => setPlaceHolderColor(bgColor)};
+      color:${({ bgColor, outliner=false }) => setPlaceHolderColor(bgColor,outliner)};
   }
 `;
 
