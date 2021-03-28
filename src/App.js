@@ -95,14 +95,14 @@ function App() {
           {/* Switch con background*/}
           <Switch bgColor="green" />
           {/* Switch por defecto a la derecha */}
-          <Switch  defaultRight  />
+          <Switch  bgColor="blue" defaultRight  />
           {/* Switch activado */}
-          <Switch  isChecked  />
+          <Switch bgColor="purple" isChecked  />
         </div>
         
         <div className="container-component">
           <h2>Modal</h2>
-          <Button bgColor="red" isShadow={true} size="md" rounded="soft" onClick={openModal}>
+          <Button bgColor="red" isShadow={true} size="md" rounded="soft" color="white "onClick={openModal}>
             I'am modal
           </Button>
           
@@ -118,6 +118,8 @@ function App() {
         <div className="container-component">
           <h2>Spinner</h2>
           <Spinner size="sm" color="yellow"/>
+          <Spinner size="md" color="blue"/>
+          <Spinner size="lg" color="red"/>
         </div>
 
         <div className="container-component">

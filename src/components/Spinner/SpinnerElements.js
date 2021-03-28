@@ -1,5 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 
+
+//@atributes
+// color = "red" - "yellow" - "green" - "blue" - "purple" - "indigo" - "pink" - default
+// size = "sm" - "md" - "lg"
+
 const spinnerOne = keyframes`
     0% { transform: rotate(0deg); border-width: 8px; }
     50% { transform: rotate(180deg); border-width: 1px; }
@@ -52,6 +57,7 @@ export const SpinnerBody = styled.div`
     width: ${({ size }) => setSize(size)};
     height: ${({ size }) => setSize(size)};
     position: relative;
+    margin: 0.5rem
 `
 
 export const SpinnerPart = styled.div`
