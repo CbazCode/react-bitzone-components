@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+
 // @atributes
 
 // color = "white" - default 
@@ -215,6 +216,7 @@ const setOutline = (outliner, outlinerColor) => {
   }
 };
 
+
 const Button = styled.button.attrs((props) => ({
   disabled: props.isDisabled,
 }))`
@@ -240,5 +242,7 @@ const Button = styled.button.attrs((props) => ({
 
   ${({ outliner, outlinerColor }) => setOutline(outliner, outlinerColor)}
 `;
+
+
 
 export default Button;

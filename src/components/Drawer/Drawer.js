@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { MdClose } from 'react-icons/md';
+import PropTypes from 'prop-types'
 const transforms = {
   top: 'translateY(-100%)',
   right: 'translateX(100%)',
@@ -124,6 +125,12 @@ export const ButtonExit = styled.button`
     color: #d1d1d1;
   }
 `;
+
+/**
+ * Prueba de comentario jsdoc!
+ * @param {Object} props 
+ * @param {string} props.onDismiss
+ */
 const Drawer = ({
   open = false,
   size,
@@ -147,5 +154,13 @@ const Drawer = ({
     </DrawerWrapper>
   );
 };
+
+Drawer.propTypes = {
+  /** ABERSH */
+  size: PropTypes.number
+}
+Drawer.defaultProps = {
+  size: 10
+}
 
 export default Drawer;
