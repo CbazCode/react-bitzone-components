@@ -1,6 +1,11 @@
 import styled, { keyframes } from 'styled-components';
 import { MdClose } from 'react-icons/md';
 
+// @atributes
+
+// withImage = {true} {false} - sourceImage = ".jpg/etc"
+//appear = "top" - "bottom" - "left" - "right" - "fadeIn"
+
 const entry = keyframes`
   from{
       /* transform: scale(0.2); */
