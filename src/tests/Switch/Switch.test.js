@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
-import { InputSwitch } from '../../components/Switch/Switch';
+import { InputSwitch } from '../../components/Switch/SwitchElements';
 
 describe('Test en <Switch />', () => {
   test('Debe renderizarse el componente por defecto', () => {
