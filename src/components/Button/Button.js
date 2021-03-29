@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-
+import PropTypes from 'prop-types';
 
 // @atributes
 
@@ -217,7 +217,7 @@ const setOutline = (outliner, outlinerColor) => {
 };
 
 
-const Button = styled.button.attrs((props) => ({
+const ButtonStyled = styled.button.attrs((props) => ({
   disabled: props.isDisabled,
 }))`
   background-color: ${({ bgColor }) => setBgColor(bgColor)};
@@ -242,6 +242,22 @@ const Button = styled.button.attrs((props) => ({
 
   ${({ outliner, outlinerColor }) => setOutline(outliner, outlinerColor)}
 `;
+
+
+
+const Button = (props)=>(
+  <ButtonStyled {...props}/>
+)
+
+Button.propTypes = {
+  /**
+   * PARA MEDIR EL TAMANIO DE SU CORAZON
+   */
+  size: PropTypes.string
+}
+Button.defaultProps = {
+  size: 10
+}
 
 
 
