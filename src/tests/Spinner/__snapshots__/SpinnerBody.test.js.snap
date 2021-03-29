@@ -5,6 +5,7 @@ exports[`Pruebas en compnente <SpinnerBody/> debe renderizarse correctamente 1`]
   width: 100px;
   height: 100px;
   position: relative;
+  margin: 0.5rem;
 }
 
 <div
