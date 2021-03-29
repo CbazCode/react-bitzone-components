@@ -127,9 +127,7 @@ export const ButtonExit = styled.button`
 `;
 
 /**
- * Prueba de comentario jsdoc!
- * @param {Object} props 
- * @param {string} props.onDismiss
+ * KIOSHI
  */
 const Drawer = ({
   open = false,

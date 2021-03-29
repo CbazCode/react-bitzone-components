@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-
+import PropTypes from 'prop-types';
 //Establece el background del boton
 const setBgColor = (bgColor = 'default') => {
   switch (bgColor) {
@@ -219,7 +219,7 @@ const setPlaceHolderColor = (bgColor,outliner=false)=>{
           return outliner ? '#777' :'#dedede';
     }
 }
-const Input = styled.input.attrs((props) => ({
+const InputStyled = styled.input.attrs((props) => ({
   disabled: props.isDisabled,
 }))`
   background-color: ${({ bgColor }) => setBgColor(bgColor)};
@@ -248,5 +248,21 @@ const Input = styled.input.attrs((props) => ({
       color:${({ bgColor, outliner=false }) => setPlaceHolderColor(bgColor,outliner)};
   }
 `;
+/**
+ * KIOSHI
+ */
+const Input = (props)=>(
+  <InputStyled {...props}/>
+)
+
+Input.propTypes = {
+  /**
+   * PARA MEDIR EL TAMANIO DE SU CORAZON
+   */
+  size: PropTypes.string
+}
+Input.defaultProps = {
+  size: 10
+}
 
 export default Input;

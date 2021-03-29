@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-
+import PropTypes from 'prop-types';
 //Animacion de pulso
 const pulse = keyframes`
   0%{
@@ -47,7 +47,7 @@ const typeSkeleton = (props) => {
   }
 };
 
-const Skeleton = styled.div`
+const SkeletonStyled = styled.div`
   width: 100%;
   height: ${(props) => props.height || 'auto'};
   margin-top: ${(props) => props.mt || '5px'};
@@ -56,5 +56,21 @@ const Skeleton = styled.div`
   margin-left: ${(props) => props.ml || '5px'};
   ${(props) => typeSkeleton(props)}
 `;
+
+/**
+ * KIOSHI
+ */
+const Skeleton = (props)=>(
+  <SkeletonStyled {...props}/>
+)
+Skeleton.propTypes = {
+  /**
+   * PARA MEDIR EL TAMANIO DE SU CORAZON
+   */
+  size: PropTypes.string
+}
+Skeleton.defaultProps = {
+  size: 10
+}
 
 export default Skeleton;

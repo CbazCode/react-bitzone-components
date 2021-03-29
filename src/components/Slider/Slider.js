@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import PropTypes from 'prop-types';
 const setBgColor = (bgColor = 'default') => {
   switch (bgColor) {
     case 'red':
@@ -33,7 +33,7 @@ const setOrientation = (orient = 'horizontal') =>
             transform: rotate(270deg);
         `;
 
-const Slider = styled.input.attrs((props) => ({
+const SliderStyled = styled.input.attrs((props) => ({
   min: props.min || 0,
   max: props.max || 100,
   value: props.value || 50,
@@ -87,4 +87,20 @@ const Slider = styled.input.attrs((props) => ({
   }
 `;
 
+
+/**
+ * KIOSHI
+ */
+const Slider = (props)=>(
+  <SliderStyled {...props}/>
+)
+Slider.propTypes = {
+  /**
+   * PARA MEDIR EL TAMANIO DE SU CORAZON
+   */
+  size: PropTypes.string
+}
+Slider.defaultProps = {
+  size: 10
+}
 export default Slider;
