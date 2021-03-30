@@ -3,6 +3,7 @@
 exports[`Test en <Switch /> Debe renderizarse el componente por defecto 1`] = `
 .c0 {
   margin: 0.5rem;
+  box-sizing: border-box;
 }
 
 .c0 .checkbox:checked + .label .ball {
@@ -17,6 +18,7 @@ exports[`Test en <Switch /> Debe renderizarse el componente por defecto 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   background-color: #9CA3AF;
   border-radius: 50px;
   cursor: pointer;
@@ -42,6 +44,7 @@ exports[`Test en <Switch /> Debe renderizarse el componente por defecto 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
@@ -62,12 +65,12 @@ exports[`Test en <Switch /> Debe renderizarse el componente por defecto 1`] = `
 >
   <input
     class="c1 checkbox"
-    id="0.5414"
+    id="test"
     type="checkbox"
   />
   <label
     class="c2 label"
-    for="0.5414"
+    for="test"
   >
     <div
       class="c3 ball"

@@ -21,7 +21,7 @@ describe('Pruebas en compnente <SpinnerPart/>', () => {
     })
 
     test('debe renderizarse con el tamaño escogido por el usuario', () => {
-        const spinner = renderer.create(<SpinnerPart color="blue" />).toJSON();
+        const spinner = renderer.create(<SpinnerPart color="primary" />).toJSON();
         expect(spinner).toHaveStyleRule('width', '100%');
         expect(spinner).toHaveStyleRule('height', '100%');
         expect(spinner).toHaveStyleRule('position', 'absolute');

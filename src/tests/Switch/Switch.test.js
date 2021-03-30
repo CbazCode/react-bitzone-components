@@ -7,7 +7,7 @@ import { InputSwitch } from '../../components/Switch/SwitchElements';
 
 describe('Test en <Switch />', () => {
   test('Debe renderizarse el componente por defecto', () => {
-    const { container } = render(<Switch />);
+    const { container } = render(<Switch id="test"/>);
     expect(container.firstChild).toMatchSnapshot();
   });
 
@@ -46,8 +46,8 @@ describe('Test en <Switch />', () => {
   });
 
   test('componente debe renderizarse con el color deseado', () => {
-    const wrapper = shallow(<Switch bgColor="red" />);
+    const wrapper = shallow(<Switch bgColor="danger" />);
     const attribute = wrapper.getElement('div').props.children[1].props;
-    expect(attribute.bgColor).toEqual('red');
+    expect(attribute.bgColor).toEqual('danger');
   });
 });
