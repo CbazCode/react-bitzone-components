@@ -65,12 +65,12 @@ exports[`Test en <Switch /> Debe renderizarse el componente por defecto 1`] = `
 >
   <input
     class="c1 checkbox"
-    id="0.5931"
+    id="test"
     type="checkbox"
   />
   <label
     class="c2 label"
-    for="0.5931"
+    for="test"
   >
     <div
       class="c3 ball"

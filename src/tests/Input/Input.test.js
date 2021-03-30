@@ -6,12 +6,12 @@ import 'jest-styled-components';
 
 describe('Test en <Input />', () => {
   test('componente <Input /> debe renderizarse correctamente', () => {
-    const { container } = render(<Input />);
+    const { container } = render(<Input rounded />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('componente debe funcionar con parametros por defecto', () => {
-    const input = renderer.create(<Input />).toJSON();
+    const input = renderer.create(<Input rounded />).toJSON();
     expect(input).toHaveStyleRule('background-color', '#9CA3AF');
     expect(input).toHaveStyleRule('border', 'none');
     expect(input).toHaveStyleRule('box-shadow', 'none');
