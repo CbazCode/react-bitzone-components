@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { setBgColor } from '../../utils/helpers';
 
 // bgColor = "red" - "yellow" - "green" - "blue" - "purple" - "indigo" - "pink" - default
 // defaultRight = "true" - "false"
@@ -9,26 +10,7 @@ import styled, { css } from 'styled-components';
 // name
 // id
 
-const setBgColor = (bgColor = 'default') => {
-  switch (bgColor) {
-    case 'red':
-      return '#DC2626';
-    case 'yellow':
-      return '#FBBF24';
-    case 'green':
-      return '#34D399';
-    case 'blue':
-      return '#3B82F6';
-    case 'purple':
-      return '#8B5CF6';
-    case 'indigo':
-      return '#6366F1';
-    case 'pink':
-      return '#EC4899';
-    default:
-      return '#111';
-  }
-};
+
 
 const setDefaultCheked = (defaultRight) => {
   return !defaultRight ? 'none' : 'translateX(24px)';

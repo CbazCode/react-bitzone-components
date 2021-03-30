@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+import { setOutline } from '../../utils/helpers';
 //Establece el background del boton
 const setBgColor = (bgColor = 'default') => {
   switch (bgColor) {
@@ -101,104 +102,7 @@ const themeDisabledBtn = (isDisabled) =>
   `;
 
 //Button con solo border sin bgColor
-const setOutline = (outliner, outlinerColor) => {
-  if (outliner) {
-    switch (outlinerColor) {
-      case 'red':
-        return css`
-          color: #dc2626 ;
-          
-          border: 1.5px solid #dc2626;
-          background-color: unset;
 
-          &:hover {
-            color: #f9fafb;
-            background-color: #dc2626;
-          }
-        `;
-      case 'yellow':
-        return css`
-          color: #fbbf24;
-          border: 1.5px solid #fbbf24;
-          background-color: unset;
-
-          &:hover {
-            color: #f9fafb;
-            background-color: #fbbf24;
-          }
-        `;
-
-      case 'green':
-        return css`
-          color: #34d399;
-          border: 1.5px solid #34d399;
-          background-color: unset;
-
-          &:hover {
-            color: #f9fafb;
-            background-color: #34d399;
-          }
-        `;
-
-      case 'blue':
-        return css`
-          color: #3b82f6;
-          border: 1.5px solid #3b82f6;
-          background-color: unset;
-
-          &:hover {
-            color: #f9fafb;
-            background-color: #3b82f6;
-          }
-        `;
-
-      case 'purple':
-        return css`
-          color: #8b5cf6;
-          border: 1.5px solid #8b5cf6;
-          background-color: unset;
-
-          &:hover {
-            color: #f9fafb;
-            background-color: #8b5cf6;
-          }
-        `;
-      case 'indigo':
-        return css`
-          color: #6366f1;
-          border: 1.5px solid #6366f1;
-          background-color: unset;
-
-          &:hover {
-            color: #f9fafb;
-            background-color: #6366f1;
-          }
-        `;
-      case 'pink':
-        return css`
-          color: #ec4899;
-          border: 1.5px solid #ec4899;
-          background-color: unset;
-
-          &:hover {
-            color: #f9fafb;
-            background-color: #ec4899;
-          }
-        `;
-      default:
-        return css`
-          color: #111827;
-          border: 1.5px solid #111827;
-          background-color: unset;
-
-          &:hover {
-            color: #f9fafb;
-            background-color: #111827;
-          }
-        `;
-    }
-  }
-};
 const setPlaceHolderColor = (bgColor,outliner=false)=>{
     switch (bgColor) {
         case 'red':

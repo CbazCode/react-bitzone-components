@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { setBgColor } from '../../utils/helpers';
 
 
 //@atributes
@@ -31,26 +32,6 @@ const setSize = (size) => {
     }
 }
 
-const setColor = (color) => {
-    switch (color) {
-        case 'red':
-          return '#DC2626';
-        case 'yellow':
-          return '#FBBF24';
-        case 'green':
-          return '#34D399';
-        case 'blue':
-          return '#3B82F6';
-        case 'purple':
-          return '#8B5CF6';
-        case 'indigo':
-          return '#6366F1';
-        case 'pink':
-          return '#EC4899';
-        default:
-          return '#9CA3AF';
-      }
-}
 
 
 export const SpinnerBody = styled.div` 
@@ -66,13 +47,13 @@ export const SpinnerPart = styled.div`
     width: 100%;
     height: 100%;
     border: 8px solid transparent;
-    border-top-color: ${({ color }) => setColor(color)};
+    border-top-color: ${({ color }) => setBgColor(color)};
     border-radius: 50%;
     animation: ${spinnerOne} 1.2s linear infinite;
 
     &:nth-child(2){
         border: 8px solid transparent;
-        border-bottom-color: ${({ color }) => setColor(color)};
+        border-bottom-color: ${({ color }) => setBgColor(color)};
         animation: ${spinnerTwo} 1.2s linear infinite;
     }
 `

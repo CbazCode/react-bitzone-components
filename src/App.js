@@ -67,19 +67,19 @@ function App() {
             Button
           </Button>
           {/* Boton con backgroud, tamaño, border-radius y deshabilitado */}
-          <Button bgColor="yellow" size="md" rounded="soft" full isDisabled>
+          <Button bgColor="danger" size="md" rounded="soft" color="white" full isDisabled>
             Button
           </Button>
             {/* Boton con backgroud, tamaño, border-radius , deshabilitado y con sombreado */}
-          <Button bgColor="green" color="white" isShadow={true} size="lg" isDisabled>
+          <Button bgColor="success" color="white" isShadow={true} size="lg" isDisabled>
             Button
           </Button>
           {/* Boton con backgroud, tamaño, border-radius , deshabilitado y con tamaño maximo a su contenedor*/}
-          <Button bgColor="blue" color="white" size="xl" rounded="full">
+          <Button bgColor="primary" color="white" size="xl" rounded="full" outliner={true} outlinerColor="warning">
             Button
           </Button>
            {/* Boton con backgroud, tamaño, border-radius , deshabilitado y con sombreado */}
-          <Button bgColor="purple" color="white" isShadow={true} size="sm" rounded="soft">
+          <Button bgColor="accent" color="white" isShadow={true} size="sm" rounded="soft">
             Button
           </Button>
         </div>
@@ -93,11 +93,11 @@ function App() {
           {/* Switch con id establecido*/}
           <Switch id="idTest1" />
           {/* Switch con background*/}
-          <Switch bgColor="green" />
+          <Switch bgColor="success" />
           {/* Switch por defecto a la derecha */}
-          <Switch  bgColor="blue" defaultRight  />
+          <Switch  bgColor="primary" defaultRight  />
           {/* Switch activado */}
-          <Switch bgColor="purple" isChecked  />
+          <Switch bgColor="accent" isChecked  />
         </div>
         
         <div className="container-component">
@@ -117,9 +117,9 @@ function App() {
 
         <div className="container-component">
           <h2>Spinner</h2>
-          <Spinner size="sm" color="yellow"/>
-          <Spinner size="md" color="blue"/>
-          <Spinner size="lg" color="red"/>
+          <Spinner size="sm" color="warning"/>
+          <Spinner size="md" color="danger"/>
+          <Spinner size="lg" color="primary"/>
         </div>
 
         <div className="container-component">
