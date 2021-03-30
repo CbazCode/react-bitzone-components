@@ -25,7 +25,7 @@ function App() {
         {/* Linea individual*/}
         <div className="container-component">
           <h2>Skeleton</h2>
-          <Skeleton height="20px" />
+          <Skeleton height={20} />
           {/* Skeleton con texto */}
           <Skeleton>
             <h1>text</h1>
@@ -40,18 +40,18 @@ function App() {
           <div style={{ display: 'flex', width: '100%' }}>
             <Skeleton type="CIRCLE" size={5} />
             <div style={{ width: '100%' }}>
-              <Skeleton height="20px" />
-              <Skeleton height="20px" />
+              <Skeleton height={20}  />
+              <Skeleton height={20}  />
             </div>
           </div>
           {temp ? <div style={{ display: 'flex', width: '100%' }}>
             <Skeleton type="CIRCLE" size={5} />
             <div style={{ width: '100%' }}>
-              <Skeleton height="20px" />
-              <Skeleton height="20px" />
+              <Skeleton height={20}  />
+              <Skeleton height={20}  />
             </div>
           </div> : <div style={{ display: 'flex', width: '100%' }}>
-            <img src={Avatar} alt="temp" style={{width:'50px',height:'50px', borderRadius:'50%'}}/>
+            <img src={Avatar} alt="temp" style={{width:'50px',height={50} , borderRadius:'50%'}}/>
             <div style={{ width: '100%', padding:'10px 15px'}}>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A iusto, quod sunt magni saepe animi assumenda adipisci deleniti laudantium harum?</p>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque quos dolorum rerum perferendis provident doloribus quae vel in mollitia autem.</p>
@@ -154,7 +154,7 @@ function App() {
             max={500}
             step={1}
             orientation="horizontal"
-            bgThumb="indigo"
+            bgThumb="primary"
             value={value}
             onChange={(e) => setValue(e.target.value)}
             full
@@ -166,14 +166,14 @@ function App() {
       
       <div className="container-component">
         <h2>Drawer</h2>
-        <Button bgColor="blue" color="white" size="xl" rounded="full" onClick={() => setisOpen(true)}>
+        <Button bgColor="primary" color="white" size="xl" rounded="full" onClick={() => setisOpen(true)}>
           Button
         </Button>
         <Drawer
           open={isOpen}
           onDismiss={() => setisOpen(false)}
           position="bottom"
-          backgroundColor="default"
+          backgroundColor="accent"
           size="350px"
           buttonExit
         >
@@ -197,7 +197,7 @@ function App() {
               esse sequi cum possimus incidunt vero, delectus eaque ipsum ducimus eum expedita rem
               voluptatem eligendi facere temporibus nesciunt quaerat eveniet aliquam! Atque, sint.
             </p>
-            <Button bgColor="red" color="white" size="xl" onClick={() => setisOpen(false)}>
+            <Button bgColor="secondary" color="white" size="xl" onClick={() => setisOpen(false)}>
               Grabar
             </Button>
           </div>

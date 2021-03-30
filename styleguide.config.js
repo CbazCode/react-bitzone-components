@@ -11,7 +11,7 @@ module.exports = {
             'src/components/Button/[A-Z]*.js',
             'src/components/Modal/Modal.js',
             'src/components/Spinner/Spinner.js',
-            'src/components/Switch/Switch.js',
+            'src/components/Switch/Switch.js', 
             'src/components/Slider/[A-Z]*.js',
             'src/components/Drawer/[A-Z]*.js',
             'src/components/Input/[A-Z]*.js',

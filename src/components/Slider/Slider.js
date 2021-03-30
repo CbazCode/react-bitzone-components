@@ -1,25 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-const setBgColor = (bgColor = 'default') => {
-  switch (bgColor) {
-    case 'red':
-      return '#DC2626';
-    case 'yellow':
-      return '#FBBF24';
-    case 'green':
-      return '#34D399';
-    case 'blue':
-      return '#3B82F6';
-    case 'purple':
-      return '#8B5CF6';
-    case 'indigo':
-      return '#6366F1';
-    case 'pink':
-      return '#EC4899';
-    default:
-      return '#4caf50';
-  }
-};
+import { setBgColor } from '../../utils/helpers';
+
 
 //Tamaño de acuerdo al contenedor
 const setFullWidth = (full) => (full ? `100%` : `auto`);
@@ -88,19 +70,62 @@ const SliderStyled = styled.input.attrs((props) => ({
 `;
 
 
-/**
- * KIOSHI
- */
 const Slider = (props)=>(
   <SliderStyled {...props}/>
 )
 Slider.propTypes = {
   /**
-   * PARA MEDIR EL TAMANIO DE SU CORAZON
+   * ~~~
+   * Minimum slider value
+   * ~~~
    */
-  size: PropTypes.string
+  min: PropTypes.number,
+  /**
+   * ~~~
+   * Maximum slider value
+   * ~~~
+   */
+  max: PropTypes.number,
+  /**
+   * ~~~
+   * Default slider value
+   * ~~~
+   */
+  value: PropTypes.number,
+  /**
+   * ~~~
+   * Size per step
+   * ~~~
+   */
+  step: PropTypes.number,
+  /**
+   * ~~~
+   * Slider direction
+   * ~~~
+   */
+  orientation: PropTypes.oneOf(['horizontal', 'vertical']),
+  /**
+   * ~~~
+   * Maximum size, equals to full width
+   * ~~~
+   */
+  full: PropTypes.bool,
+  /**
+   * ~~~
+   * Slider color
+   * ~~~
+   */
+  bgThumb: PropTypes.oneOf(['danger','warning','success','primary','accent','info','secondary','text'])
 }
+
 Slider.defaultProps = {
-  size: 10
+  min: 0,
+  max: 100,
+  value: 50,  
+  step: 1,
+  orientation: 'horizontal',
+  full: true,
+  bgThumb: 'text'
 }
+
 export default Slider;

@@ -38,39 +38,95 @@ const renderCircle = (isLoaded = false, size = 5) =>
 
 //Selector del tipo de skeleton
 const typeSkeleton = (props) => {
-  let type = props?.type?.toUpperCase() || 'DEFAULT';
+  let type = props.type.toUpperCase() || 'DEFAULT';
   switch (type) {
     case 'CIRCLE':
-      return renderCircle(props?.isLoaded, props.size);
+      return renderCircle(props.isLoaded, props.size);
     default:
-      return renderLoading(props?.isLoaded);
+      return renderLoading(props.isLoaded);
   }
 };
 
 const SkeletonStyled = styled.div`
   width: 100%;
-  height: ${(props) => props.height || 'auto'};
-  margin-top: ${(props) => props.mt || '5px'};
-  margin-right: ${(props) => props.mr || '5px'};
-  margin-bottom: ${(props) => props.mb || '5px'};
-  margin-left: ${(props) => props.ml || '5px'};
+  height: ${(props) => `${props.height}px` || 'auto'};
+  margin-top: ${(props) => `${props.mt}px` || '5px'};
+  margin-right: ${(props) => `${props.mr}px` || '5px'};
+  margin-bottom: ${(props) => `${props.mb}px` || '5px'};
+  margin-left: ${(props) => `${props.ml}px` || '5px'};
   ${(props) => typeSkeleton(props)}
 `;
 
-/**
- * KIOSHI
- */
-const Skeleton = (props)=>(
-  <SkeletonStyled {...props}/>
-)
+const Skeleton = (props) => <SkeletonStyled {...props} />;
+
 Skeleton.propTypes = {
   /**
-   * PARA MEDIR EL TAMANIO DE SU CORAZON
+   * ~~~
+   * Skeleton dimension
+   * ~~~
    */
-  size: PropTypes.string
-}
+  height: PropTypes.number,
+  /**
+   * ~~~
+   * Skeleton margin top
+   * ~~~
+   */
+  mt: PropTypes.number,
+  /**
+   * ~~~
+   * Skeleton margin right
+   * ~~~
+   */
+  mr: PropTypes.number,
+  /**
+   * ~~~
+   * Skeleton margin bottom
+   * ~~~
+   */
+  mb: PropTypes.number,
+  /**
+   * ~~~
+   * Skeleton margin left
+   * ~~~
+   */
+  ml: PropTypes.number,
+  /**
+   * ~~~
+   * Skeleton shape
+   * ~~~
+   */
+  type: PropTypes.oneOf( ['DEFAULT','CIRCLE']),
+  /**
+   * ~~~
+   * Skeleton size
+   * ~~~
+   */
+  size: PropTypes.number,
+  /**
+   * ~~~
+   * Skeleton status
+   * ~~~
+   */
+  isLoaded: PropTypes.bool,
+  /**
+   * ~~~  
+   * Skeleton children
+   * ~~~
+   *
+   */ 
+  children: PropTypes.node
+
+};
 Skeleton.defaultProps = {
-  size: 10
-}
+  mt: 5,
+  mr: 5,
+  mb: 5,
+  ml: 5,
+  type: 'DEFAULT',
+  size: 5,
+  isLoaded: false,
+  children: null,
+  height: 200
+};
 
 export default Skeleton;

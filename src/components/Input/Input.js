@@ -1,27 +1,8 @@
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { setOutline } from '../../utils/helpers';
+import { setBgColor, setOutline } from '../../utils/helpers';
 //Establece el background del boton
-const setBgColor = (bgColor = 'default') => {
-  switch (bgColor) {
-    case 'red':
-      return '#DC2626';
-    case 'yellow':
-      return '#FBBF24';
-    case 'green':
-      return '#34D399';
-    case 'blue':
-      return '#3B82F6';
-    case 'purple':
-      return '#8B5CF6';
-    case 'indigo':
-      return '#6366F1';
-    case 'pink':
-      return '#EC4899';
-    default:
-      return '#9CA3AF';
-  }
-};
+
 
 //Establece el color de la fuente
 const setColorText = (color = 'default') => {
@@ -152,21 +133,76 @@ const InputStyled = styled.input.attrs((props) => ({
       color:${({ bgColor, outliner=false }) => setPlaceHolderColor(bgColor,outliner)};
   }
 `;
-/**
- * KIOSHI
- */
+
 const Input = (props)=>(
   <InputStyled {...props}/>
 )
 
 Input.propTypes = {
   /**
-   * PARA MEDIR EL TAMANIO DE SU CORAZON
+   * ~~~
+   *  Disable the Input
+   * ~~~
    */
-  size: PropTypes.string
+  disabled:PropTypes.bool,
+  /**
+   * ~~~
+   * Set background color's Input. 
+   * ~~~
+   */
+  bgColor:PropTypes.oneOf(['primary', 'secondary','danger','warning','success','info','accent','text']),
+  /**
+   * ~~~
+   * Set shadow's Input
+   * ~~~
+   */
+  isShadow:PropTypes.bool,
+  /**
+   * ~~~
+   * Set color letter's Input. 
+   * ~~~
+   */
+  color:PropTypes.oneOf(['white']),
+  /**
+   * ~~~
+   * Set size's Input.
+   * ~~~
+   */
+  size:PropTypes.oneOf(['sm', 'md','lg','xl']),
+  /**
+   * ~~~
+   * Set the width will be the same to its container
+   * ~~~
+   */
+  full:PropTypes.bool,
+  /**
+   * ~~~
+   * Set an style outliner to the Input
+   * ~~~
+   */
+  outliner:PropTypes.bool,
+  /**
+   * ~~~
+   * Set the background color of the style outliner
+   * ~~~
+   */
+  outlinerColor:PropTypes.oneOf(['primary', 'secondary','danger','warning','success','info','accent','text']),
+  /**
+   * Set rounded's button
+   */
+  rounded: PropTypes.oneOf(['soft','full']),
 }
+ 
 Input.defaultProps = {
-  size: 10
+  color:"black",
+  bgColor:"text",
+  size: "md",
+  isShadow: false,
+  rounded:"none",
+  full: false,
+  isDisabled: false,
+  outliner: false,
+  outlinerColor: "black",
 }
 
 export default Input;

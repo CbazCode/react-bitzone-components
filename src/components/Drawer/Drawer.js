@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { MdClose } from 'react-icons/md';
 import PropTypes from 'prop-types'
+import { setBgColor } from '../../utils/helpers';
 const transforms = {
   top: 'translateY(-100%)',
   right: 'translateX(100%)',
@@ -31,26 +32,6 @@ const placements = {
   },
 };
 
-const setBgColor = (bgColor = 'default') => {
-  switch (bgColor) {
-    case 'red':
-      return '#DC2626';
-    case 'yellow':
-      return '#FBBF24';
-    case 'green':
-      return '#34D399';
-    case 'blue':
-      return '#3B82F6';
-    case 'purple':
-      return '#8B5CF6';
-    case 'indigo':
-      return '#6366F1';
-    case 'pink':
-      return '#EC4899';
-    default:
-      return 'rgba(5, 29, 51, 0.9)';
-  }
-};
 
 const animation = keyframes`
     from{
@@ -126,15 +107,13 @@ export const ButtonExit = styled.button`
   }
 `;
 
-/**
- * KIOSHI
- */
+
 const Drawer = ({
-  open = false,
+  open,
   size,
-  position = 'right',
+  position,
   onDismiss,
-  backgroundColor = 'default',
+  backgroundColor,
   children,
   buttonExit,
 }) => {
@@ -154,11 +133,64 @@ const Drawer = ({
 };
 
 Drawer.propTypes = {
-  /** ABERSH */
-  size: PropTypes.number
+  /**
+   * ~~~
+   * Drawer dimension
+   * ~~~
+   */
+  size: PropTypes.number.isRequired,
+   /**
+   * ~~~
+   * Define if Drawer is open
+   * ~~~
+   */
+  open: PropTypes.bool,
+  /**
+   * ~~~
+   * Drawer position
+   * ~~~
+   */
+  position: PropTypes.oneOf(['left,top,right,bottom']),
+  /**
+   * ~~~
+   * Drawer dismiss function
+   * ~~~
+   */
+  onDismiss: PropTypes.func,
+  /**
+   * ~~~
+   * Drawer background color
+   * ~~~
+   */
+  backgroundColor: PropTypes.oneOf(['danger','warning','success','primary','accent','info','secondary','text']),
+  /**
+   * ~~~
+   * Children component
+   * ~~~
+   */
+  children: PropTypes.node.isRequired,
+  /**
+   * ~~~
+   * Drawer exit button
+   * ~~~
+   */
+  buttonExit: PropTypes.bool,
+
 }
 Drawer.defaultProps = {
-  size: 10
+  open: false,
+  position: 'left',
+  onDismiss: ()=>{},
+  backgroundColor: 'text',
+  buttonExit: true,
 }
+
+/* open = false,
+  size,
+  position = 'right',
+  onDismiss,
+  backgroundColor = 'default',
+  children,
+  buttonExit, */
 
 export default Drawer;
