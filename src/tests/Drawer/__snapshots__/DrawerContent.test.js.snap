@@ -12,7 +12,7 @@ exports[`Test en <DrawerContent /> componente <DrawerContent /> debe renderizars
   transition: transform 0.2s ease-out;
   overflow-x: hidden;
   color: #fafafa;
-  background-color: rgba(5,29,51,0.9);
+  background-color: #9CA3AF;
   padding: 1rem 2rem;
   box-shadow: -10px 0px 10px rgba(0,0,0,0.19);
 }

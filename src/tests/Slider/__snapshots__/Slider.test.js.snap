@@ -2,6 +2,12 @@
 
 exports[`Test en <Slider /> componente <Slider /> debe renderizarse correctamente sin parametros 1`] = `
 <styled.input
-  size={10}
+  bgThumb="text"
+  full={true}
+  max={100}
+  min={0}
+  orientation="horizontal"
+  step={1}
+  value={50}
 />
 `;

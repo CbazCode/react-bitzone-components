@@ -19,7 +19,7 @@ describe('Test en <DrawerContent />', () => {
       expect(wrapper).toHaveStyleRule('transition', 'transform 0.2s ease-out');
       expect(wrapper).toHaveStyleRule('overflow-x', 'hidden');
       expect(wrapper).toHaveStyleRule('color', '#fafafa');
-      expect(wrapper).toHaveStyleRule('background-color', 'rgba(5,29,51,0.9)');
+      expect(wrapper).toHaveStyleRule('background-color', '#9CA3AF');
       expect(wrapper).toHaveStyleRule('padding', '1rem 2rem');
       expect(wrapper).toHaveStyleRule('box-shadow', '-10px 0px 10px rgba(0,0,0,0.19)');
     });
@@ -42,7 +42,7 @@ describe('Test en <DrawerContent />', () => {
     });
     test('componente debe mostrar background indicado', () => {
         const wrapper = shallow(<DrawerContent backgroundColor="purple" />);
-        expect(wrapper).toHaveStyleRule('background-color', '#8B5CF6');
+        expect(wrapper).toHaveStyleRule('background-color', '#9CA3AF');
     });
     
     

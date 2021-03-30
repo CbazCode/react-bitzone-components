@@ -11,7 +11,7 @@ describe('Test en <Skeleton />', () => {
   test('componente debe funcionar con parametros por defecto', () => {
     const skeleton = renderer.create(<Skeleton />).toJSON();
     expect(skeleton).toHaveStyleRule('width', '100%');
-    expect(skeleton).toHaveStyleRule('height', 'auto');
+    expect(skeleton).toHaveStyleRule('height', '200px');
     expect(skeleton).toHaveStyleRule('margin-top', '5px');
     expect(skeleton).toHaveStyleRule('margin-right', '5px');
     expect(skeleton).toHaveStyleRule('margin-bottom', '5px');
@@ -24,7 +24,7 @@ describe('Test en <Skeleton />', () => {
   });
   test('componente debe funcionar con propiedades - default', () => {
     const skeleton = renderer
-      .create(<Skeleton height="20px" mt="6px" mr="6px" mb="6px" ml="6px" />)
+      .create(<Skeleton height={20} mt={6} mr={6} mb={6} ml={6} />)
       .toJSON();
     expect(skeleton).toHaveStyleRule('width', '100%');
     expect(skeleton).toHaveStyleRule('height', '20px');
@@ -39,7 +39,7 @@ describe('Test en <Skeleton />', () => {
     expect(skeleton).toHaveStyleRule('animation', 'dKHzAH 3s linear infinite');
   });
   test('componente debe funcionar con type circle', () => {
-    const skeleton = renderer.create(<Skeleton type="circle" />).toJSON();
+    const skeleton = renderer.create(<Skeleton type="CIRCLE" />).toJSON();
     expect(skeleton).toHaveStyleRule('width', 'calc(5px*10)');
     expect(skeleton).toHaveStyleRule('height', 'calc(5px*10)');
     expect(skeleton).toHaveStyleRule('margin-top', '5px');
@@ -52,7 +52,7 @@ describe('Test en <Skeleton />', () => {
     expect(skeleton).toHaveStyleRule('animation', 'dKHzAH 3s linear infinite');
   });
   test('componente debe funcionar con type circle y size', () => {
-    const skeleton = renderer.create(<Skeleton type="circle" size={10} />).toJSON();
+    const skeleton = renderer.create(<Skeleton type="CIRCLE" size={10} />).toJSON();
     expect(skeleton).toHaveStyleRule('width', 'calc(10px*10)');
     expect(skeleton).toHaveStyleRule('height', 'calc(10px*10)');
     expect(skeleton).toHaveStyleRule('margin-top', '5px');
@@ -68,7 +68,7 @@ describe('Test en <Skeleton />', () => {
   test('componente debe mostrar contenido cuando esta cargado', () => {
     const skeleton = renderer.create(<Skeleton isLoaded={true} />).toJSON();
     expect(skeleton).toHaveStyleRule('width', '100%');
-    expect(skeleton).toHaveStyleRule('height', 'auto');
+    expect(skeleton).toHaveStyleRule('height', '200px');
     expect(skeleton).toHaveStyleRule('margin-top', '5px');
     expect(skeleton).toHaveStyleRule('margin-right', '5px');
     expect(skeleton).toHaveStyleRule('margin-bottom', '5px');
