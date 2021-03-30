@@ -25,7 +25,7 @@ describe('Test en <Input />', () => {
   });
   test('componente debe mostrar el color de fuente, background y hover de acuerdo al color escogido por el usuario', () => {
     const input = renderer
-      .create(<Input color="white" bgColor="red" />)
+      .create(<Input color="white" bgColor="danger" />)
       .toJSON();
     expect(input).toHaveStyleRule('background-color', '#DC2626');
     expect(input).toHaveStyleRule('border', 'none');
@@ -41,7 +41,7 @@ describe('Test en <Input />', () => {
 
   test('componente debe mostrarse con la caja sombreada', () => {
     const input = renderer
-      .create(<Input color="white" bgColor="red" isShadow={true} />)
+      .create(<Input color="white" bgColor="danger" isShadow={true} />)
       .toJSON();
     expect(input).toHaveStyleRule('background-color', '#DC2626');
     expect(input).toHaveStyleRule('border', 'none');
@@ -76,17 +76,17 @@ describe('Test en <Input />', () => {
   });
   test('componente debe mostrar el estilo outliner escogido por el usuario con hover acorde al outliner', () => {
     const input = renderer
-      .create(<Input outliner={true} outlinerColor="red" />)
+      .create(<Input outliner={true} outlinerColor="danger" />)
       .toJSON();
 
     expect(input).toHaveStyleRule('box-shadow', 'none');
-    expect(input).toHaveStyleRule('color', '#dc2626');
+    expect(input).toHaveStyleRule('color', '#DC2626');
     expect(input).toHaveStyleRule('margin', '0.5rem');
     expect(input).toHaveStyleRule('padding', '0.5rem 1rem');
     expect(input).toHaveStyleRule('border-radius', '0px');
     expect(input).toHaveStyleRule('outline', 'none');
     expect(input).toHaveStyleRule('transition', 'all 0.2s ease-in-out');
-    expect(input).toHaveStyleRule('border', '1.5px solid #dc2626');
+    expect(input).toHaveStyleRule('border', '1.5px solid #DC2626');
     expect(input).toHaveStyleRule('background-color', 'unset');
     expect(input).toHaveStyleRule(
       `&:hover{ color: #F9FAFB; background-color:#DC2626; }`

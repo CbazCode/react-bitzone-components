@@ -39,6 +39,6 @@ exports[`Test en <Input /> componente <Input /> debe renderizarse correctamente 
 
 <input
   class="c0"
-  size="10"
+  color="black"
 />
 `;

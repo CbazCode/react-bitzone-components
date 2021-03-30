@@ -16,7 +16,7 @@ describe('Test en <Slider />', () => {
     expect(attribute.max).toEqual(150);
     expect(attribute.value).toEqual(30);
     expect(attribute.step).toEqual(5);
-    expect(attribute.type).toEqual('range');
+    expect(attribute.type).not.toEqual('range');
     //Evaluar las propiedades de css
     expect(wrapper).toHaveStyleRule('height', '25px');
     expect(wrapper).toHaveStyleRule('outline', 'none');
@@ -37,7 +37,7 @@ describe('Test en <Slider />', () => {
     expect(wrapper).toHaveStyleRule('height', '25px', {
       modifier: '::-webkit-slider-thumb',
     });
-    expect(wrapper).toHaveStyleRule('background', '#4caf50', {
+    expect(wrapper).toHaveStyleRule('background', '#9CA3AF', {
       modifier: '::-webkit-slider-thumb',
     });
     expect(wrapper).toHaveStyleRule('cursor', 'pointer', {
@@ -50,7 +50,7 @@ describe('Test en <Slider />', () => {
     expect(wrapper).toHaveStyleRule('transform', 'scale(1.1)', {
       modifier: ':active::-webkit-slider-thumb',
     });
-    expect(wrapper).toHaveStyleRule('box-shadow', '0 0 0 3px #d7dcdf, 0 0 0 6px #4caf50', {
+    expect(wrapper).toHaveStyleRule('box-shadow', '0 0 0 3px #d7dcdf, 0 0 0 6px #9CA3AF', {
       modifier: ':active::-webkit-slider-thumb',
     });
 
@@ -64,7 +64,7 @@ describe('Test en <Slider />', () => {
     expect(wrapper).toHaveStyleRule('border-radius', '50%', {
       modifier: '::-moz-range-thumb',
     });
-    expect(wrapper).toHaveStyleRule('background', '#4caf50', {
+    expect(wrapper).toHaveStyleRule('background', '#9CA3AF', {
       modifier: '::-moz-range-thumb',
     });
     expect(wrapper).toHaveStyleRule('cursor', 'pointer', {
@@ -77,12 +77,12 @@ describe('Test en <Slider />', () => {
     expect(wrapper).toHaveStyleRule('transform', 'scale(1.1)', {
       modifier: ':active::-moz-range-thumb',
     });
-    expect(wrapper).toHaveStyleRule('box-shadow', '0 0 0 3px #d7dcdf, 0 0 0 6px #4caf50', {
+    expect(wrapper).toHaveStyleRule('box-shadow', '0 0 0 3px #d7dcdf, 0 0 0 6px #9CA3AF', {
       modifier: ':active::-moz-range-thumb',
     });
   });
   test('componente <Slider /> debe mostrar color correspondiente', () => {
-    const wrapper = shallow(<Slider bgThumb="purple" />);
+    const wrapper = shallow(<Slider bgThumb="accent" />);
     //Chrome
     expect(wrapper).toHaveStyleRule('background', '#8B5CF6', {
       modifier: '::-webkit-slider-thumb',
