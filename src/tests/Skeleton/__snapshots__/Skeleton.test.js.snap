@@ -21,5 +21,6 @@ exports[`Test en <Skeleton /> componente <Skeleton /> debe renderizarse correcta
 
 <div
   class="c0"
+  size="10"
 />
 `;
