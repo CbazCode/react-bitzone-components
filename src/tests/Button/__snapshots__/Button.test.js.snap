@@ -23,6 +23,6 @@ exports[`Test en <Button /> componente <Button /> debe renderizarse correctament
 
 <button
   class="c0"
-  size="10"
+  color="black"
 />
 `;

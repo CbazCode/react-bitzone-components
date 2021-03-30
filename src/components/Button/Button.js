@@ -75,13 +75,13 @@ Button.propTypes = {
    * Set color letter's button. 
    * ~~~
    */
-  color:PropTypes.oneOf(['white']),
+  color:PropTypes.oneOf(['white','black']),
   /**
    * ~~~
    * Set background color's button. 
    * ~~~
    */
-   bgColor: PropTypes.oneOf(['primary', 'secondary','danger','warning','success','info','accent','text']),
+   bgColor: PropTypes.oneOf(['primary', 'secondary','danger','warning','success','info','accent','text','black']),
     /**
    * ~~~
    * Set size's button.
@@ -130,18 +130,17 @@ Button.propTypes = {
    * ~~~
    * 
    */
-  outlinerColor: PropTypes.oneOf(['primary', 'secondary','danger','warning','success','info','accent','text']),
+  outlinerColor: PropTypes.oneOf(['primary', 'secondary','danger','warning','success','info','accent','text',"black"]),
 }
 Button.defaultProps = {
   color:"black",
   bgColor:"text",
   size: "md",
   isShadow: false,
-  rounded:"none",
   full: false,
   isDisabled: false,
   outliner: false,
-  outlinerColor: "black",
+  outlinerColor: "black"
 }
 
 

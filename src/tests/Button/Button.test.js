@@ -25,7 +25,7 @@ describe('Test en <Button />', () => {
   });
   test('componente debe mostrar el color de fuente, background y hover de acuerdo al color escogido por el usuario', () => {
     const button = renderer
-      .create(<Button color="white" bgColor="red" />)
+      .create(<Button color="white" bgColor="danger" />)
       .toJSON();
     expect(button).toHaveStyleRule('background-color', '#DC2626');
     expect(button).toHaveStyleRule('border', 'none');
@@ -41,7 +41,7 @@ describe('Test en <Button />', () => {
 
   test('componente debe mostrarse con la caja sombreada', () => {
     const button = renderer
-      .create(<Button color="white" bgColor="red" isShadow={true} />)
+      .create(<Button color="white" bgColor="danger" isShadow={true} />)
       .toJSON();
     expect(button).toHaveStyleRule('background-color', '#DC2626');
     expect(button).toHaveStyleRule('border', 'none');
@@ -76,17 +76,17 @@ describe('Test en <Button />', () => {
   });
   test('componente debe mostrar el estilo outliner escogido por el usuario con hover acorde al outliner', () => {
     const button = renderer
-      .create(<Button outliner={true} outlinerColor="red" />)
+      .create(<Button outliner={true} outlinerColor="danger" />)
       .toJSON();
 
     expect(button).toHaveStyleRule('box-shadow', 'none');
-    expect(button).toHaveStyleRule('color', '#dc2626');
+    expect(button).toHaveStyleRule('color', '#DC2626');
     expect(button).toHaveStyleRule('margin', '0.5rem');
     expect(button).toHaveStyleRule('padding', '0.5rem 1rem');
     expect(button).toHaveStyleRule('border-radius', '0px');
     expect(button).toHaveStyleRule('outline', 'none');
     expect(button).toHaveStyleRule('transition', 'all 0.2s ease-in-out');
-    expect(button).toHaveStyleRule('border', '1.5px solid #dc2626');
+    expect(button).toHaveStyleRule('border', '1.5px solid #DC2626');
     expect(button).toHaveStyleRule('background-color', 'unset');
     expect(button).toHaveStyleRule(
       `&:hover{ color: #F9FAFB; background-color:#DC2626; }`
