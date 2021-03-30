@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Background, CloseModalButton,  ModalContent, ModalImg, ModalWrapper } from './ModalElements';
-
+import PropTypes from 'prop-types';
 
 
 const Modal = ({ showModal, setShowModal, children,appear, withImage, sourceImage}) => { 
@@ -83,4 +83,35 @@ const Modal = ({ showModal, setShowModal, children,appear, withImage, sourceImag
     );
   };
 
-  export default Modal;
+
+Modal.propTypes = {
+
+  /**
+   * ~~~
+   * Set the animation's modal. 
+   * ~~~
+   */
+   appear: PropTypes.oneOf(['top', 'bottom','left','right','fadeIn']),
+    /**
+   * ~~~
+   * Set if there will be an image
+   * ~~~
+   * 
+   */
+     withImage: PropTypes.bool,
+ /**
+   * ~~~
+   * If withImage is seted. It's necesary to give an source image
+   * ~~~
+   * 
+   */
+  sourceImage: PropTypes.string,
+  
+}
+Modal.defaultProps = {
+  appear:"top",
+  withImage:false,
+  sourceImage: ""
+}
+
+export default Modal;

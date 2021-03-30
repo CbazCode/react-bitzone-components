@@ -2,23 +2,8 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { setBgColor, setHover, setOutline, setColorText, setFontSize, setShadow} from '../../utils/helpers';
 
-// @atributes
-
-// color = "white" - default 
-// bgColor = "red" - "yellow" - "green" - "blue" - "purple" - "indigo" - "pink" - default
-// rounded = "soft" - "full" - default
-// size = "sm" - "md"(default) - "lg" - "xl"
-// isShadow = {true} - {false}
-// full = {true} - {false}
-// isDisabled = {true} - {false}
-// outliner = {true} - {false}
-// outlinerColor = "red" - "yellow" - "green" - "blue" - "purple" - "indigo" - "pink" - default
 
 
-//Establece el color de la fuente
-// const setColorText = (color = 'default') => {
-//   return color === 'white' ? '#F9FAFB' : '#111827';
-// };
 
 //Establece el borde
 const roundedBtn = (rounded = 'default') => {
@@ -45,6 +30,7 @@ const themeDisabledBtn = (isDisabled) =>
   isDisabled &&
   css`
     opacity: 0.5;
+    cursor:default;
     &:hover { 
       opacity: 0.5;
     }
@@ -83,13 +69,79 @@ const Button = (props)=>(
 )
 
 Button.propTypes = {
+
   /**
-   * PARA MEDIR EL TAMANIO DE SU CORAZON
+   * ~~~
+   * Set color letter's button. 
+   * ~~~
    */
-  size: PropTypes.string
+  color:PropTypes.oneOf(['white']),
+  /**
+   * ~~~
+   * Set background color's button. 
+   * ~~~
+   */
+   bgColor: PropTypes.oneOf(['primary', 'secondary','danger','warning','success','info','accent','text']),
+    /**
+   * ~~~
+   * Set size's button.
+   * ~~~
+   * 
+   */
+  size: PropTypes.oneOf(['sm', 'md','lg','xl']),
+ /**
+   * ~~~
+   * Set shadow's button
+   * ~~~
+   * 
+   */
+  isShadow: PropTypes.bool,
+  /**
+   * ~~~
+   * Set rounded's button
+   * ~~~
+   * 
+   */
+  rounded:PropTypes.oneOf(['soft','full']),
+  /**
+   * ~~~
+   * Set the width will be the same to its container
+   * ~~~
+   * 
+   */
+  full:PropTypes.bool,
+  /**
+   * ~~~
+   * Disable the button
+   * ~~~
+   * 
+   */
+  isDisabled: PropTypes.bool,
+  /**
+   * ~~~
+   * Set an style outliner to the button
+   * ~~~
+   * 
+   */
+  outliner: PropTypes.bool,
+  /**
+   * ~~~
+   * Set the background color of the style outliner
+   * ~~~
+   * 
+   */
+  outlinerColor: PropTypes.oneOf(['primary', 'secondary','danger','warning','success','info','accent','text']),
 }
 Button.defaultProps = {
-  size: 10
+  color:"black",
+  bgColor:"text",
+  size: "md",
+  isShadow: false,
+  rounded:"none",
+  full: false,
+  isDisabled: false,
+  outliner: false,
+  outlinerColor: "black",
 }
 
 

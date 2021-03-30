@@ -1,17 +1,6 @@
 import styled, { css } from 'styled-components';
 import { setBgColor } from '../../utils/helpers';
 
-// bgColor = "red" - "yellow" - "green" - "blue" - "purple" - "indigo" - "pink" - default
-// defaultRight = "true" - "false"
-// size = "sm" "md" "lg"
-//isDisabled
-// isChecked = "true" - "false"
-// is Required = "true" - "false"
-// name
-// id
-
-
-
 const setDefaultCheked = (defaultRight) => {
   return !defaultRight ? 'none' : 'translateX(24px)';
 };
@@ -60,6 +49,7 @@ const setSizeLabel = (size) => {
 
 export const SwitchContainer = styled.div`
   margin: 0.5rem;
+  box-sizing: border-box;
   .checkbox:checked + .label .ball {
     transform: ${({ defaultRight }) => setDefaultChekedBall(defaultRight)};
   }
@@ -79,6 +69,7 @@ export const InputSwitch = styled.input.attrs((props) => ({
 export const LabelSwitch = styled.label.attrs((props) => ({
   htmlFor: props.htmlFor,
 }))`
+   box-sizing: border-box;
   background-color: ${({ bgColor }) => setBgColor(bgColor)};
   border-radius: 50px;
   cursor: pointer;
@@ -92,6 +83,7 @@ export const LabelSwitch = styled.label.attrs((props) => ({
 `;
 
 export const Ball = styled.div`
+  box-sizing: border-box;
   background-color: #fff;
   border-radius: 50%;
   position: absolute;

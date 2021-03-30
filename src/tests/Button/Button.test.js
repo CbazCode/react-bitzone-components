@@ -6,7 +6,7 @@ import 'jest-styled-components';
 
 describe('Test en <Button />', () => {
   test('componente <Button /> debe renderizarse correctamente', () => {
-    const { container } = render(<Button />);
+    const { container } = render(<Button/>);
     expect(container.firstChild).toMatchSnapshot();
   });
 

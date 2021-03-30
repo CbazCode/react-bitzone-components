@@ -43,7 +43,7 @@ export const setHover = (bgColor = 'default', color = 'default') => {
       case 'secondary':
         return isWhite ? colors.secondary_700 : colors.secondary_400;
       default:
-        return isWhite ? colors.text_900 : colors.text_300;
+        return isWhite ? colors.black : colors.text_300;
     }
   };
 
@@ -134,13 +134,13 @@ export const setOutline = (outliner, outlinerColor) => {
         `;
       default:
         return css`
-          color: ${colors.text_900};
-          border: 1.5px solid ${colors.text_900};
+          color: ${colors.black};
+          border: 1.5px solid ${colors.black};
           background-color: unset;
 
           &:hover {
             color: ${colors.text_50};
-            background-color: ${colors.text_900};
+            background-color: ${colors.black};
           }
         `;
     }
@@ -149,7 +149,7 @@ export const setOutline = (outliner, outlinerColor) => {
 
 //Establece el color de la fuente
 export const setColorText = (color = 'default') => {
-  return color === 'white' ? colors.text_50 : colors.text_900 ;
+  return color === 'white' ? colors.text_50 : colors.black ;
 };
 
 //Tamaño de fuente

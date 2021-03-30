@@ -1,11 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { setBgColor } from '../../utils/helpers';
 
-
-//@atributes
-// color = "red" - "yellow" - "green" - "blue" - "purple" - "indigo" - "pink" - default
-// size = "sm" - "md" - "lg"
-
 const spinnerOne = keyframes`
     0% { transform: rotate(0deg); border-width: 8px; }
     50% { transform: rotate(180deg); border-width: 1px; }

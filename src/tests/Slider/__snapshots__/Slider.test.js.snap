@@ -1,71 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test en <Slider /> componente <Slider /> debe renderizarse correctamente sin parametros 1`] = `
-.c0 {
-  -webkit-appearance: none;
-  -webkit-transform: rotate(0eg);
-  -ms-transform: rotate(0eg);
-  transform: rotate(0eg);
-  width: auto;
-  height: 25px;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  border-radius: 8px;
-  background: #d7dcdf;
-}
-
-.c0:hover {
-  opacity: 1;
-}
-
-.c0::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #4caf50;
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
-  -webkit-transition: transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
-  transition: transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
-}
-
-.c0:active::-webkit-slider-thumb {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  box-shadow: 0 0 0 3px #d7dcdf, 0 0 0 6px #4caf50;
-}
-
-.c0::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4caf50;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
-  -webkit-transition: transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
-  transition: transform 0.15s ease-in-out,box-shadow 0.25s ease-in-out;
-}
-
-.c0:active::-moz-range-thumb {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  box-shadow: 0 0 0 3px #d7dcdf, 0 0 0 6px #4caf50;
-}
-
-<input
-  className="c0"
-  max={100}
-  min={0}
-  step={1}
-  type="range"
-  value={50}
+<styled.input
+  size={10}
 />
 `;

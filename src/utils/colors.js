@@ -86,5 +86,5 @@ export const colors = {
     text_600:'#4B5563',
     text_700:'#374151',
     text_800:'#1F2937',
-    text_900:'#111827'
+    black:'#111827'
 }
