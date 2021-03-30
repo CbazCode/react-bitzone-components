@@ -23,4 +23,6 @@ module.exports = {
       ]
 }
 
+//npx styleguidist server 
+
 
