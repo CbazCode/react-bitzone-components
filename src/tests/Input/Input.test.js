@@ -6,12 +6,12 @@ import 'jest-styled-components';
 
 describe('Test en <Input />', () => {
   test('componente <Input /> debe renderizarse correctamente', () => {
-    const { container } = render(<Input rounded />);
+    const { container } = render(<Input  />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   test('componente debe funcionar con parametros por defecto', () => {
-    const input = renderer.create(<Input rounded />).toJSON();
+    const input = renderer.create(<Input  />).toJSON();
     expect(input).toHaveStyleRule('background-color', '#9CA3AF');
     expect(input).toHaveStyleRule('border', 'none');
     expect(input).toHaveStyleRule('box-shadow', 'none');
@@ -62,16 +62,16 @@ describe('Test en <Input />', () => {
     const input = renderer.create(<Input outliner={true} />).toJSON();
 
     expect(input).toHaveStyleRule('box-shadow', 'none');
-    expect(input).toHaveStyleRule('color', '#111827');
+    expect(input).toHaveStyleRule('color', '#3B82F6');
     expect(input).toHaveStyleRule('margin', '0.5rem');
     expect(input).toHaveStyleRule('padding', '0.5rem 1rem');
     expect(input).toHaveStyleRule('border-radius', '0px');
     expect(input).toHaveStyleRule('outline', 'none');
     expect(input).toHaveStyleRule('transition', 'all 0.2s ease-in-out');
-    expect(input).toHaveStyleRule('border', '1.5px solid #111827');
+    expect(input).toHaveStyleRule('border', '1.5px solid #3B82F6');
     expect(input).toHaveStyleRule('background-color', 'unset');
     expect(input).toHaveStyleRule(
-      `&:hover{ color: #F9FAFB; background-color:#111827; }`
+      `&:hover{ color: #F9FAFB; background-color:#3B82F6; }`
     );
   });
   test('componente debe mostrar el estilo outliner escogido por el usuario con hover acorde al outliner', () => {

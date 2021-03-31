@@ -162,7 +162,7 @@ Input.propTypes = {
    * Set color letter's Input. 
    * ~~~
    */
-  color:PropTypes.oneOf(['white']),
+  color:PropTypes.oneOf(['white','black']),
   /**
    * ~~~
    * Set size's Input.
@@ -198,11 +198,10 @@ Input.defaultProps = {
   bgColor:"text",
   size: "md",
   isShadow: false,
-  rounded:"none",
   full: false,
   isDisabled: false,
   outliner: false,
-  outlinerColor: "black",
+  outlinerColor: "primary",
 }
 
 export default Input;
