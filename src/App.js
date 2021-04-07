@@ -16,7 +16,7 @@ function App() {
       author: 'Juan Carlos',
       date: '19 de Marzo 2021',
       done: true,
-      icon: 'user',
+      icon: 'check',
       isFinal: false,
     },
     {
@@ -57,6 +57,22 @@ function App() {
       date: '19 de Marzo 2021',
       done: false,
       icon: 'user',
+      isFinal: false,
+    },
+    {
+      title:'Creacion de solicitud',
+      author: 'Juan Carlos',
+      date: '19 de Marzo 2021',
+      done: false,
+      icon: 'check',
+      isFinal: false,
+    },
+    {
+      title:'Creacion de solicitud',
+      author: 'Juan Carlos',
+      date: '19 de Marzo 2021',
+      done: false,
+      icon: 'check',
       isFinal: false,
     },
     {

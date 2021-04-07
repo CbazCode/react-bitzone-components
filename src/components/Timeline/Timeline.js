@@ -23,7 +23,6 @@ const isFinalTask = (isFinal = false)=>{
     `
     )
 }
-
 const TimelineS = styled.div`
     width: 100%;
     
@@ -109,17 +108,10 @@ export const Timeline = ({children}) =>{
 
 Timeline.propTypes = {
     done:PropTypes.bool,
-    // customeColor: PropTypes.oneOf(['danger','primary', 'warning']),
     connectorLenght: PropTypes.number,
 }
-//   Button.defaultProps = {
-//     color:"black",
-//     bgColor:"text",
-//     size: "md",
-//     isShadow: false,
-//     full: false,
-//     isDisabled: false,
-//     outliner: false,
-//     outlinerColor: "black"
-//   }
+Timeline.defaultProps = {
+    done: false,
+    connectorLenght:4
+}
   
